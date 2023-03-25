@@ -7,7 +7,7 @@ body{
 }
 
 .container{
-    width: 300px;    
+    width: 300px; 
     background-color: #FFF;
     
     display: block;
@@ -52,7 +52,7 @@ body{
 
 .weather-icon{
     width: 300px;
-    height: 128px;
+    height: 120px;
 }
 
 .weather-icon img{
@@ -62,7 +62,7 @@ body{
 
 .temperature-value{
     width: 300px;
-    height:60px;
+    height: 53px;
 }
 
 .temperature-value p{
