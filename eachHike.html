@@ -28,7 +28,7 @@
     <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-storage.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/ui/4.8.1/firebase-ui-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/ui/4.8.1/firebase-ui-auth.js"></script> 
     <link type="text/css" rel="stylesheet" href="https://www.gstatic.com/firebasejs/ui/4.8.1/firebase-ui-auth.css" />
 
     <!-------------------------------------------->
@@ -53,11 +53,9 @@
         <h1><span id="hikeName">this hike</span></h1>
         <div class="position-relative">
             <img class="hike-img responsive" src="" alt="Hike photo">
-            <button class="btn btn-primary position-absolute bottom-0 end-0 m-3"
-                onclick="saveHikeDocumentIDAndRedirect()">Write Review</button>
+            <button class="btn btn-primary position-absolute bottom-0 end-0 m-3" onclick="saveHikeDocumentIDAndRedirect()">Write Review</button>
         </div>
     </div>
-
     <div class="container">
         <h2>Reviews:</h2>
         <div id="details-go-here"></div>
@@ -83,7 +81,10 @@
                 </p>
             </div>
         </div>
-    </template>
+    </template>     
+
+    
+   
 
     <!-- our own footer goes here-->
     <nav id="footerPlaceholder"></nav>

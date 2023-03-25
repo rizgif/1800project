@@ -11,7 +11,7 @@ function displayHikeInformation(){
 
         document.getElementById("hikeName").innerHTML=hikeName;
         let imgEvent = document.querySelector( ".hike-img" );
-        imgEvent.src = "../images/" + hikeCode + ".jpg";
+        imgEvent.src = "./images/" + hikeCode + ".jpg";
     }
 
     )
@@ -30,12 +30,13 @@ function populateReviews() {
     let hikeCardTemplate = document.getElementById("reviewCardTemplate");
     let hikeCardGroup = document.getElementById("reviewCardGroup");
 
-    let params = new URL(window.location.href) //get the url from the searbar
-    let hikeID = params.searchParams.get("docID");
-    // var hikeID = localStorage.getItem("hikeDocID");
+    //let params = new URL(window.location.href) //get the url from the searbar
+    //let hikeID = params.searchParams.get("docID");
+    var hikeID = localStorage.getItem("hikeDocID");
     
     // doublecheck: is your collection called "Reviews" or "reviews"?
     db.collection("reviews").where( "hikeDocID", "==", hikeID).get()
+        .limit(2)
         .then(allReviews => {
             reviews=allReviews.docs;
             console.log(reviews);
