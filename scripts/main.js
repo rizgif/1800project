@@ -130,7 +130,7 @@ button1.addEventListener('click', function() {
   // Add the new data to the "locations" collection
   locationsRef.add(data)
     .then(function(docRef) {
-      window.location.href = 'eachhike.html';
+      window.location.href = 'eachLocation.html';
       console.log("Document written with ID: ", docRef.id);
     })
     .catch(function(error) {
@@ -159,7 +159,7 @@ button2.addEventListener('click', function() {
   // Add the new data to the "locations" collection
   locationsRef.add(data)
     .then(function(docRef) {
-      window.location.href = 'eachhike.html';
+      window.location.href = 'eachLocation.html';
       console.log("Document written with ID: ", docRef.id);
     })
     .catch(function(error) {
@@ -187,7 +187,7 @@ button3.addEventListener('click', function() {
   // Add the new data to the "locations" collection
   locationsRef.add(data)
     .then(function(docRef) {
-      window.location.href = 'eachhike.html';
+      window.location.href = 'eachLocation.html';
       console.log("Document written with ID: ", docRef.id);
     })
     .catch(function(error) {
@@ -215,7 +215,7 @@ button4.addEventListener('click', function() {
   // Add the new data to the "locations" collection
   locationsRef.add(data)
     .then(function(docRef) {
-      window.location.href = 'eachhike.html';
+      window.location.href = 'eachLocation.html';
       console.log("Document written with ID: ", docRef.id);
     })
     .catch(function(error) {
@@ -243,7 +243,7 @@ button5.addEventListener('click', function() {
   // Add the new data to the "locations" collection
   locationsRef.add(data)
     .then(function(docRef) {
-      window.location.href = 'eachhike.html';
+      window.location.href = 'eachLocation.html';
       console.log("Document written with ID: ", docRef.id);
     })
     .catch(function(error) {

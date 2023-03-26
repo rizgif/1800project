@@ -4,14 +4,14 @@ function displayHikeInformation(){
     let ID = params.searchParams.get("docID");
     console.log(ID);
 
-    db.collection("Temperatures").doc(ID).get().then( thisHike =>{
+    db.collection("locations").doc(ID).get().then( thisHike =>{
         hikeInfo = thisHike.data();
         hikeCode = hikeInfo.code;
-        hikeName = hikeInfo.name;
+        hikeName = hikeInfo.locationName;
 
         document.getElementById("hikeName").innerHTML=hikeName;
         let imgEvent = document.querySelector( ".hike-img" );
-        imgEvent.src = "./images/" + hikeCode + ".jpg";
+        imgEvent.src = "./images/" + code + ".jpg";
     }
 
     )
