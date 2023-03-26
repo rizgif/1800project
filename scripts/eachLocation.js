@@ -36,15 +36,13 @@ function populateReviews() {
     
     // doublecheck: is your collection called "Reviews" or "reviews"?
     db.collection("Temperatures").where( "hikeDocID", "==", hikeID).get()
-        .limit(5)
+      
         .then(allReviews => {
             reviews=allReviews.docs;
             console.log(reviews);
             reviews.forEach(doc => {
                 var user = doc.data().userID; //gets the name field
-              
                 var flooded = doc.data().flooded;
-        
                 var timestamp = doc.data().timestamp;
                 
 
@@ -54,7 +52,7 @@ function populateReviews() {
                 reviewCard.querySelector('.timestamp').innerHTML = `user: ${timestamp}`; 
                 
             
-               
+    
                 hikeCardGroup.appendChild(reviewCard);
             })
         })
