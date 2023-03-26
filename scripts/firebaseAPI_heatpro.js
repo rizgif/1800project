@@ -9,8 +9,7 @@ var firebaseConfig = {
     messagingSenderId: "483967183474",
     appId: "1:483967183474:web:0adf32d917571d857b30eb",
     measurementId: "G-2E6H9F7XEV"
-};
-
+}
 //--------------------------------------------
 // initialize the Firebase app
 // initialize Firestore database if using it

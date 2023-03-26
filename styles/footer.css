@@ -1,3 +1,7 @@
-/* .copyright{
-    padding: 1px;
-} */
+
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}

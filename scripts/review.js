@@ -1,26 +1,27 @@
-var hikeDocID = localStorage.getItem("hikeDocID");    //visible to all functions on this page
+// var hikeDocID = localStorage.getItem("hikeDocID");
+// console.log(hikeDocID)
 
-function getHikeName(id) {
-    db.collection("hikes")
-      .doc(id)
-      .get()
-      .then((thisHike) => {
-        var hikeName = thisHike.data().name;
-        document.getElementById("hikeName").innerHTML = hikeName;
-          });
-}
+// function getHikeName(id) {
+//     db.collection("hikes")
+//       .doc(id)
+//       .get()
+//       .then((thisHike) => {
+//         var hikeName = thisHike.data().name;
+//         document.getElementById("hikeName").innerHTML = hikeName;
+//           });
+// }
 
-getHikeName(hikeDocID);
+// getHikeName(hikeDocID);
 
 function writeReview() {
     console.log("inside write review")
-    let Title = document.getElementById("title").value;
-    let Level = document.getElementById("level").value;
-    let Season = document.getElementById("season").value;
-    let Description = document.getElementById("description").value;
+    // let Title = document.getElementById("title").value;
+    // let Level = document.getElementById("level").value;
+    // let Season = document.getElementById("season").value;
+    // let Description = document.getElementById("description").value;
     let Flooded = document.querySelector('input[name="flooded"]:checked').value;
-    let Scrambled = document.querySelector('input[name="scrambled"]:checked').value;
-    console.log(Title, Level, Season, Description, Flooded, Scrambled);
+    // let Scrambled = document.querySelector('input[name="scrambled"]:checked').value;
+    console.log(Flooded);
 
     firebase.auth().onAuthStateChanged(user => {
         if (user) {
@@ -30,18 +31,18 @@ function writeReview() {
             currentUser.get()
                 .then(userDoc => {
                     var userEmail = userDoc.data().email;
-                    db.collection("reviews").add({
-                        hikeDocID: hikeDocID,
+                    db.collection("Temperatures").add({
+                        // hikeDocID: hikeDocID,
                         userID: userID,
-                        title: Title,
-                        level: Level,
-                        season: Season,
-                        description: Description,
+                        // title: Title,
+                        // level: Level,
+                        // season: Season,
+                        // description: Description,
                         flooded: Flooded,
-                        scrambled: Scrambled,
+                        // scrambled: Scrambled,
                         timestamp: firebase.firestore.FieldValue.serverTimestamp()
                     }).then(() => {
-                        window.location.href = "thanks.html"; //new line added
+                        window.location.href = "eachHike.html"; //new line added
                     })
                 })
         } else {
