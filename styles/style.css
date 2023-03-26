@@ -17,12 +17,9 @@
   } 
 
 body {
-<<<<<<< HEAD
   /* background-image: url("../images/background.png"); */
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-=======
   background-image: url("../images/background2.png");
->>>>>>> main
 } 
