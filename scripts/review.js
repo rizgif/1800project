@@ -1,5 +1,6 @@
-var hikeDocID = localStorage.getItem("hikeDocID");
-console.log(hikeDocID)
+// Retrieve the value of the 'docId' key from local storage
+var docID = localStorage.getItem('docId');
+console.log(docID);
 
 function getHikeName(id) {
     db.collection("locations")
@@ -11,7 +12,7 @@ function getHikeName(id) {
           });
 }
 
-getHikeName(hikeDocID);
+getHikeName(docID);
 
 function writeReview() {
     console.log("inside write review")
@@ -31,7 +32,7 @@ function writeReview() {
                     db.collection("Temperatures").add({
                         // hikeDocID: hikeDocID,
                         userID: userID,
-                        locationDocID: hikeDocID,
+                        locationDocID: docID,
                         //locationCode: locationCode,
                         //locationName: locationName,
                         flooded: Flooded,
