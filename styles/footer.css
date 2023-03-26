@@ -1,3 +1,27 @@
-/* .copyright{
-    padding: 1px;
-} */
+
+
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+/*footer social media */
+
+#socialmedia{
+font-size: 1pt;
+
+}
+
+/*footer main content*/
+
+.middle{
+
+}
+
+/*footer copyright */
+
+#copyright{
+  
+}
