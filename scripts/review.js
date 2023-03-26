@@ -2,11 +2,11 @@ var hikeDocID = localStorage.getItem("hikeDocID");
 console.log(hikeDocID)
 
 function getHikeName(id) {
-    db.collection("hikes")
+    db.collection("locations")
       .doc(id)
       .get()
       .then((thisHike) => {
-        var hikeName = thisHike.data().name;
+        var hikeName = thisHike.data().locationName;
         document.getElementById("hikeName").innerHTML = hikeName;
           });
 }
@@ -15,31 +15,26 @@ getHikeName(hikeDocID);
 
 function writeReview() {
     console.log("inside write review")
-    // let Title = document.getElementById("title").value;
-    // let Level = document.getElementById("level").value;
-    // let Season = document.getElementById("season").value;
-    // let Description = document.getElementById("description").value;
     let Flooded = document.querySelector('input[name="flooded"]:checked').value;
-    // let Scrambled = document.querySelector('input[name="scrambled"]:checked').value;
-    console.log(Flooded);
+    //console.log(Flooded);
 
     firebase.auth().onAuthStateChanged(user => {
         if (user) {
             var currentUser = db.collection("users").doc(user.uid)
+            //var locationName = db.collection("locations").doc(locationName); //added
+            //var locationCode = db.collection("locations").doc(code); //added
             var userID = user.uid;
             //get the document for current user.
             currentUser.get()
                 .then(userDoc => {
                     var userEmail = userDoc.data().email;
                     db.collection("Temperatures").add({
-                        hikeDocID: hikeDocID,
+                        // hikeDocID: hikeDocID,
                         userID: userID,
-                        // title: Title,
-                        // level: Level,
-                        // season: Season,
-                        // description: Description,
+                        locationDocID: hikeDocID,
+                        //locationCode: locationCode,
+                        //locationName: locationName,
                         flooded: Flooded,
-                        // scrambled: Scrambled,
                         timestamp: firebase.firestore.FieldValue.serverTimestamp()
                     }).then(() => {
                         window.location.href = "eachLocation.html"; //new line added
