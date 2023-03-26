@@ -1,116 +1,172 @@
-/* countries section */
-/* .countries {
-    height: 50vh;
-} */
+.header {
+    margin: 2%;
+    padding: 10px, 15px;
+    text-align: center;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .first,
+  .second,
+  .thrid {
+    flex: 1 1 30%;
+    margin: 10px;
+  }
+  
+  .fourth,
+  .fifth {
+    flex: 1 1 40%;
+    margin: 10px;
+  }
+  
+  @media (max-width: 767px) {
+    .first,
+    .second,
+    .thrid,
+    .fourth,
+    .fifth {
+      flex: 1 1 100%;
+      margin: 10px 0;
+    }
+  }
+  
+.container{
+    margin: unset;
+}
 .container h2 {
     position: absolute;
     text-align: center;
-    font-size: 40px;
-    z-index: 10px;
-    color: white;
+    font-size: 35px;
+    z-index: 10;
+    color: black;
     font-weight: bold;
     /* top: 30%;
     left: 50%;
     transform: translate(-50%, -50%); */
 }
 
-.first .second .thrid .fourth .fifth {
+.header h1 {
+    font-size: 40px;
+    font-weight: bold;
+    z-index: 10;
+    color: black;
+    font-weight: bold;
+    /* top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%); */
+}
+
+.header p{
+    font-size: 25px;
+}
+
+
+.container {
+    margin: 2%;
+}
+
+.container h1 {
+    margin: 2%;
+    text-align: center;
+}
+
+.first, .second, .thrid, .fourth, .fifth{
     position: relative;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    /* left: 70px; */
 }
 
 .first-image {
-    background-image: url(/images/fraser_map.png);
-    height: 60vh;
+    /* background-image: linear-gradient(to bottom, rgba(237, 237, 242, 0.7) 40%, rgba(173, 173, 237, 0.4) 60%),  url(/images/fraser_map.png); */
+    background-color: white;
+    height: 43vh;
     width: 100%;
     background-size: cover;
     font-size: 60px;
-    /* color: #836016; */
-    /* text-align: center;
-    justify-content: center;
-    align-items: center; */
-    margin-bottom: 10px;
+    margin: 10px;
     transition: 0.5s;
-    background-position: center center;
+    background-position: center;
     /* background-position: right 5%; */
-    background-size: 75%;
+    /* background-size: 100%;  */
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-repeat: no-repeat;
+    text-align: center;
+    background-repeat: no-repeat; 
+    /* filter:blur(2px); */
+    border-radius: 10px;;
+   
 }
 
-
-
-
 .second-image {
-    background-image: url(/images/interior_map.png);
-    height: 60vh;
+    background-color: white;
+    height: 43vh;
     width: 100%;
     background-size: cover;
     font-size: 60px;
-    /* color: #836016; */
-    /* text-align: center;
-    justify-content: center;
-    align-items: center; */
-    margin-bottom: 10px;
-    filter: grayscale(10%);
+    margin: 10px;
     transition: 0.5s;
-    background-position: center center;
+    background-position: center;
     /* background-position: right 5%; */
-    background-size: 75%;
+    /* background-size: 100%;  */
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-repeat: no-repeat;
+    text-align: center;
+    background-repeat: no-repeat; 
+    /* filter:blur(2px); */
+    border-radius: 10px;;
 }
 
 .thrid-image {
-    background-image: url(/images/vancouver_island.png);
-    height: 60vh;
+    background-color: white;
+    height: 43vh;
     width: 100%;
     background-size: cover;
     font-size: 60px;
-    /* color: #836016; */
-    /* text-align: center;
-    justify-content: center;
-    align-items: center; */
-    margin-bottom: 10px;
-    filter: grayscale(10%);
+    margin: 10px;
     transition: 0.5s;
-    background-position: center center;
+    background-position: center;
     /* background-position: right 5%; */
-    background-size: 75%;
+    /* background-size: 100%;  */
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-repeat: no-repeat;
+    text-align: center;
+    background-repeat: no-repeat; 
+    /* filter:blur(2px); */
+    border-radius: 10px;;
 }
 
 
 .fourth-image {
-    background-image: url(/images/nh_map.png);
-    height: 60vh;
+    background-color: white;
+    height: 43vh;
     width: 100%;
     background-size: cover;
     font-size: 60px;
-    /* color: #836016; */
-    /* text-align: center;
-    justify-content: center;
-    align-items: center; */
-    margin-bottom: 10px;
-    filter: grayscale(10%);
+    margin: 10px;
     transition: 0.5s;
-    background-position: center center;
+    background-position: center;
     /* background-position: right 5%; */
-    background-size: 75%;
+    /* background-size: 100%;  */
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-repeat: no-repeat;
+    text-align: center;
+    background-repeat: no-repeat; 
+    /* filter:blur(2px); */
+    border-radius: 10px;;
 }
 
 /* .first:hover,
@@ -126,47 +182,51 @@
 
 
 .fifth-image {
-    background-image: url(/images/vancouver_map.png);
-    height: 60vh;
+    background-color: white;
+    height: 43vh;
     width: 100%;
     background-size: cover;
     font-size: 60px;
-    /* color: #836016; */
-    /* text-align: center;
-    justify-content: center;
-    align-items: center; */
-    margin-bottom: 10px;
-    filter: grayscale(10%);
+    margin: 10px;
     transition: 0.5s;
-    background-position: center center;
+    background-position: center;
     /* background-position: right 5%; */
-    background-size: 75%;
+    /* background-size: 100%;  */
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-repeat: no-repeat;
+    text-align: center;
+    background-repeat: no-repeat; 
+    /* filter:blur(2px); */
+    border-radius: 10px;;
 }
 
-.content {
-    display: none;
-}
-
-
-
-.hero-btn {  
+.hero-btn {
     display: inline-block;
     text-decoration: none;
-    color: rgb(74, 130, 175);
+    color: white;
     /* border: 1px solid #300707; */
     padding: 12px 34px;
     font-size: 20px;
     font-weight: bold;
-    background: white;
+    background: rgb(160, 61, 61);
     position: relative;
     cursor: pointer;
     border-radius: 5px;
-    bottom: -100px;
+    bottom: 10px
+}
+
+
+.hero-btn:hover {
+    border: white;
+    background: rgb(74, 130, 175);
+    color: white;
+    transition: 0.5s;
+}
+
+.content {
+    display: none;
 }
 
 /* .first .hero-btn:hover
@@ -181,10 +241,23 @@
     transition: 0.5s;
 } */
 
- .hero-btn:hover
-{
-    border: white;
-    background: rgb(74, 130, 175);
-    color: white;
-    transition: 0.5s;
+.first img{
+    width: 270px;
+    height: 220px;
+}
+.second img,
+.thrid img{
+    width: 250px;
+    height: 150px;
+}
+
+
+.fourth img {
+    width: 250px;
+    height: 150px;
+}
+
+.fifth img{
+    width: 270px;
+    height: 220px;
 }
