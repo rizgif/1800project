@@ -42,7 +42,7 @@ function writeReview() {
                         // scrambled: Scrambled,
                         timestamp: firebase.firestore.FieldValue.serverTimestamp()
                     }).then(() => {
-                        window.location.href = "eachHike.html"; //new line added
+                        window.location.href = "eachLocation.html"; //new line added
                     })
                 })
         } else {

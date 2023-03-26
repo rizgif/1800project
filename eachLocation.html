@@ -53,11 +53,11 @@
         <h1><span id="hikeName">this hike</span></h1>
         <div class="position-relative">
             <img class="hike-img responsive" src="" alt="Hike photo">
-            <button class="btn btn-primary btn-lg btn-danger position-absolute bottom-0 end-0 m-3" onclick="saveHikeDocumentIDAndRedirect()">Put in your Temperature!</button>
+            <button class="btn btn-primary btn-danger position-absolute bottom-0 end-0 m-3" onclick="saveHikeDocumentIDAndRedirect()">Share your temperature with other people!</button>
         </div>
     </div>
     <div class="container">
-        <h2>Temperatures that other people have shared: </h2>
+        <h2>Reviews:</h2>
         <div id="details-go-here"></div>
         <!-- Here is container for cards  -->
         <div class="container">
@@ -65,6 +65,7 @@
             </div>
         </div>
     </div>
+
 
     <template id="reviewCardTemplate">
         <div class="card bg-secondary">
@@ -94,7 +95,7 @@
     <!---------------------------------------------->
     <script src="./scripts/firebaseAPI_heatpro.js"></script>
     <script src="./scripts/skeleton.js"></script>
-    <script src="./scripts/eachHike.js"></script>
+    <script src="./scripts/eachLocation.js"></script>
 
 </body>
 

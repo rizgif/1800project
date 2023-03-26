@@ -4,7 +4,7 @@ function displayHikeInformation(){
     let ID = params.searchParams.get("docID");
     console.log(ID);
 
-    db.collection("hikes").doc(ID).get().then( thisHike =>{
+    db.collection("Temperatures").doc(ID).get().then( thisHike =>{
         hikeInfo = thisHike.data();
         hikeCode = hikeInfo.code;
         hikeName = hikeInfo.name;
@@ -35,29 +35,26 @@ function populateReviews() {
     var hikeID = localStorage.getItem("hikeDocID");
     
     // doublecheck: is your collection called "Reviews" or "reviews"?
-    db.collection("reviews").where( "hikeDocID", "==", hikeID).get()
-        .limit(2)
+    db.collection("Temperatures").where( "hikeDocID", "==", hikeID).get()
+        .limit(5)
         .then(allReviews => {
             reviews=allReviews.docs;
             console.log(reviews);
             reviews.forEach(doc => {
-                var title = doc.data().title; //gets the name field
-                var level = doc.data().level; //gets the unique ID field
-                var season = doc.data().season;
-                var description = doc.data().description; //gets the length field
+                var user = doc.data().userID; //gets the name field
+              
                 var flooded = doc.data().flooded;
-                var scrambled = doc.data().scrambled;
-                var time = doc.data().timestamp.toDate();
-                console.log(time)
+        
+                var timestamp = doc.data().timestamp;
+                
 
                 let reviewCard = hikeCardTemplate.content.cloneNode(true);
-                reviewCard.querySelector('.title').innerHTML = title;     //equiv getElementByClassName
-                reviewCard.querySelector('.time').innerHTML = new Date(time).toLocaleString();    //equiv getElementByClassName
-                reviewCard.querySelector('.level').innerHTML = `level: ${level}`;
-                reviewCard.querySelector('.season').innerHTML = `season: ${season}`;
-                reviewCard.querySelector('.scrambled').innerHTML = `scrambled: ${scrambled}`;  //equiv getElementByClassName
-                reviewCard.querySelector('.flooded').innerHTML = `flooded: ${flooded}`;  //equiv getElementByClassName
-                reviewCard.querySelector('.description').innerHTML = `Description: ${description}`;
+                reviewCard.querySelector('.user').innerHTML = `user: ${user}`;     //equiv getElementByClassName
+                reviewCard.querySelector('.flooded').innerHTML = `user: ${flooded}`; 
+                reviewCard.querySelector('.timestamp').innerHTML = `user: ${timestamp}`; 
+                
+            
+               
                 hikeCardGroup.appendChild(reviewCard);
             })
         })

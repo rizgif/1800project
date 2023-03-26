@@ -53,7 +53,7 @@ function getBookmarks(user) {
 						// Iterate through the ARRAY of bookmarked hikes (document ID's)
             bookmarks.forEach(thisHikeID => {
                 console.log(thisHikeID);
-                db.collection("hikes").doc(thisHikeID).get().then(doc => {
+                db.collection("Temperatures").doc(thisHikeID).get().then(doc => {
                     var title = doc.data().name; // get value of the "name" key
                     var hikeCode = doc.data().code; //get unique ID to each hike to be used for fetching right image
                     var hikeLength = doc.data().length; //gets the length field
