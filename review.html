@@ -36,6 +36,7 @@
     <!-------------------------------------------->
     <!-- <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"> -->
     <link rel="stylesheet" href="./styles/style.css">
+    <link rel="stylesheet" href="./styles/review_style.css">
 
 </head>
 
@@ -58,45 +59,32 @@
         <form>
             <div class="form-group">
                 <br>
-                <div class="form-group">
-                    <label for="exampleFormControlTextarea1">What did you think of the trail?</label>
-                    <textarea class="form-control" id="description" rows="3"></textarea>
-                </div>
-                <br>
                 <!--Flooded-->
-                <label>Flooded <span style="display:inline-block; width: 26pt;"></span></label>
-        
+                <label>Select how you fee like! <span style="display:inline-block; width: 26pt;"></span></label>
+                <br/>
                 <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="flooded" value="Yes">
-                    <label>Yes</label>
+                    <input class="form-check-input" type="radio" name="flooded" value="More Cooler">
+                    <label>More Cooler</label>
                 </div>
                 <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="flooded" value="No">
-                    <label>No</label>
+                    <input class="form-check-input" type="radio" name="flooded" value="Cooler">
+                    <label>Cooler</label>
                 </div>
                 <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="flooded" value="unSure" checked="">
-                    <label>Not sure</label>
-                </div>
-                <br>
-                <!--Scramble-->
-                <label>Scramble <span style="display:inline-block; width: 20pt;"></span></label>
-        
-                <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="scrambled" value="Yes">
-                    <label>Yes</label>
+                    <input class="form-check-input" type="radio" name="flooded" value="Same" checked="">
+                    <label>Same</label>
                 </div>
                 <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="scrambled" value="No">
-                    <label>No</label>
+                    <input class="form-check-input" type="radio" name="flooded" value="Hotter" checked="">
+                    <label>Hotter</label>
                 </div>
                 <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="scrambled" value="unSure" checked="">
-                    <label>Not sure</label>
+                    <input class="form-check-input" type="radio" name="flooded" value="More Hotter" checked="">
+                    <label>More Hotter</label>
                 </div>
         
                 <br>
-                <div class="d-flex justify-content-end">
+                <div class="d-flex justify-content-center" id="temperature_submit">
                     <button type="button" class="btn btn-lg btn-primary pull-right" onclick="writeReview()">Submit</button>
                 </div>
         </form>
