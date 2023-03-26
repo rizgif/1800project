@@ -4,39 +4,43 @@
     text-align: center;
 }
 
+
 .container {
+    width: 100vw;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-  }
-  
-  .first,
-  .second,
-  .thrid {
+}
+
+.first,
+.second,
+.thrid {
     flex: 1 1 30%;
     margin: 10px;
-  }
-  
-  .fourth,
-  .fifth {
+}
+
+.fourth,
+.fifth {
     flex: 1 1 40%;
     margin: 10px;
-  }
-  
-  @media (max-width: 767px) {
+}
+
+@media (max-width: 767px) {
+
     .first,
     .second,
     .thrid,
     .fourth,
     .fifth {
-      flex: 1 1 100%;
-      margin: 10px 0;
+        flex: 1 1 100%;
+        margin: 10px 0;
     }
-  }
-  
-.container{
+}
+
+.container {
     margin: unset;
 }
+
 .container h2 {
     position: absolute;
     text-align: center;
@@ -60,26 +64,28 @@
     transform: translate(-50%, -50%); */
 }
 
-.header p{
+.header p {
     font-size: 25px;
 }
 
-
-.container {
-    margin: 2%;
-}
 
 .container h1 {
     margin: 2%;
     text-align: center;
 }
 
-.first, .second, .thrid, .fourth, .fifth{
+.first,
+.second,
+.thrid,
+.fourth,
+.fifth {
     position: relative;
     align-items: center;
     justify-content: center;
     text-align: center;
+    border-color: 1px solid rgba(254, 215, 102, 0.7);
     /* left: 70px; */
+    border-color: black;
 }
 
 .first-image {
@@ -99,10 +105,13 @@
     justify-content: center;
     align-items: center;
     text-align: center;
-    background-repeat: no-repeat; 
+    background-repeat: no-repeat;
     /* filter:blur(2px); */
-    border-radius: 10px;;
-   
+    border-radius: 10px;
+
+    /* rgba(155, 120, 15, 0.7); */
+
+
 }
 
 .second-image {
@@ -121,9 +130,10 @@
     justify-content: center;
     align-items: center;
     text-align: center;
-    background-repeat: no-repeat; 
+    background-repeat: no-repeat;
     /* filter:blur(2px); */
-    border-radius: 10px;;
+    border-radius: 10px;
+    ;
 }
 
 .thrid-image {
@@ -142,9 +152,10 @@
     justify-content: center;
     align-items: center;
     text-align: center;
-    background-repeat: no-repeat; 
+    background-repeat: no-repeat;
     /* filter:blur(2px); */
-    border-radius: 10px;;
+    border-radius: 10px;
+    ;
 }
 
 
@@ -164,9 +175,10 @@
     justify-content: center;
     align-items: center;
     text-align: center;
-    background-repeat: no-repeat; 
+    background-repeat: no-repeat;
     /* filter:blur(2px); */
-    border-radius: 10px;;
+    border-radius: 10px;
+    ;
 }
 
 /* .first:hover,
@@ -197,58 +209,64 @@
     justify-content: center;
     align-items: center;
     text-align: center;
-    background-repeat: no-repeat; 
+    background-repeat: no-repeat;
     /* filter:blur(2px); */
-    border-radius: 10px;;
+    border-radius: 10px;
+    ;
 }
 
 .hero-btn {
-    display: inline-block;
+    /* display: inline-block;
     text-decoration: none;
     color: white;
     /* border: 1px solid #300707; */
-    padding: 12px 34px;
+    /* padding: 12px 34px;
     font-size: 20px;
     font-weight: bold;
     background: rgb(160, 61, 61);
     position: relative;
     cursor: pointer;
-    border-radius: 5px;
-    bottom: 10px
+    border-radius: 5px; 
+    bottom: 10px */
+    border: double 5px transparent;
+    background-color: #FF6653;
+    width: 13rem;
+    font-size: 18px;
+    text-decoration: none;
+    text-align: center;
+    height: 3rem;
+    border-radius: 2rem;
+    box-shadow: 0 0 5px #FF3300,
+        0 0 25px #FF3300;
+    color: floralwhite;
+    bottom: 10px;
 }
 
 
 .hero-btn:hover {
-    border: white;
+    /* border: white;
     background: rgb(74, 130, 175);
     color: white;
-    transition: 0.5s;
+    transition: 0.5s; */
+    color: floralwhite;
+    box-shadow: 0 0 5px #FF3300,
+        0 0 5px #FF3300, 0 0 15px #FF3300,
+        0 0 30px #FF3300;
 }
 
 .content {
     display: none;
 }
 
-/* .first .hero-btn:hover
-.second .hero-btn:hover
-.thrid .hero-btn:hover
-.fourth .hero-btn:hover
-.fifth .hero-btn:hover
-{
-    border: white;
-    background: rgb(74, 130, 175);
-    color: white;
-    transition: 0.5s;
-} */
-
-.first img{
+.first img {
     width: 270px;
-    height: 220px;
+    height: 240px;
 }
+
 .second img,
-.thrid img{
+.thrid img {
     width: 250px;
-    height: 150px;
+    height: 130px;
 }
 
 
@@ -257,7 +275,7 @@
     height: 150px;
 }
 
-.fifth img{
-    width: 270px;
-    height: 220px;
+.fifth img {
+    width: 240px;
+    height: 160px;
 }
