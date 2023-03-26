@@ -57,9 +57,46 @@
         <!-- weather page -->
         <iframe src="weather_app.html" width="100%" height="400"></iframe>
         <form>
-            <div class="form-group">
+            <fieldset>
+                <legend>Select how you feel like!</legend>
+                    <div class="radio-item-container">
+                        <div class="radio-item">
+                            <label for="More Cooler">
+                                <input type="radio" id="More Cooler" name="flooded" value="More Cooler">
+                                <span>More Cooler <span class="icon">🍨</span> </span>
+                            </label>
+                        </div>
+
+                        <div class="radio-item">
+                            <label for="Cooler">
+                                <input type="radio" id="Cooler" name="flooded" value="Cooler">
+                                <span>Cooler <span class="icon">🌡️</span></span></label>
+                        </div>
+
+                        <div class="radio-item">
+                            <label for="Same">
+                                <input type="radio" id="Same" name="flooded" value="Same" checked>
+                                <span>Same <span class="icon">🍓</span></span></label>
+                        </div>
+                        
+                        <div class="radio-item">
+                            <label for="Hotter">
+                                <input type="radio" id="Hotter" name="flooded" value="Hotter">
+                                <span>Hotter <span class="icon">🌡️</span></span></label>
+                        </div>
+                        
+                        <div class="radio-item">
+                            <label for="More Hotter">
+                                <input type="radio" id="More Hotter" name="flooded" value="More Hotter">
+                                <span>More Hotter <span class="icon">🍓</span></span></label>
+                        </div>
+                    </div>
                 <br>
-                <!--Flooded-->
+                <div class="d-flex justify-content-center" id="temperature_submit">
+                    <button type="button" class="btn_submit" onclick="writeReview()">Submit</button>
+                </div>
+            </fieldset>
+            <!-- <div class="form-group">
                 <label>Select how you fee like! <span style="display:inline-block; width: 26pt;"></span></label>
                 <br/>
                 <div class="form-check form-check-inline">
@@ -86,7 +123,7 @@
                 <div class="d-flex justify-content-center" id="temperature_submit">
                     <button type="button" class="btn btn-lg btn-primary pull-right" onclick="writeReview()">Submit</button>
                 </div>
-            </div>
+            </div> -->
         </form>
 
     <!-- our own footer goes here-->
