@@ -1,17 +1,17 @@
-// var hikeDocID = localStorage.getItem("hikeDocID");
-// console.log(hikeDocID)
+var hikeDocID = localStorage.getItem("hikeDocID");
+console.log(hikeDocID)
 
-// function getHikeName(id) {
-//     db.collection("hikes")
-//       .doc(id)
-//       .get()
-//       .then((thisHike) => {
-//         var hikeName = thisHike.data().name;
-//         document.getElementById("hikeName").innerHTML = hikeName;
-//           });
-// }
+function getHikeName(id) {
+    db.collection("hikes")
+      .doc(id)
+      .get()
+      .then((thisHike) => {
+        var hikeName = thisHike.data().name;
+        document.getElementById("hikeName").innerHTML = hikeName;
+          });
+}
 
-// getHikeName(hikeDocID);
+getHikeName(hikeDocID);
 
 function writeReview() {
     console.log("inside write review")
@@ -32,7 +32,7 @@ function writeReview() {
                 .then(userDoc => {
                     var userEmail = userDoc.data().email;
                     db.collection("Temperatures").add({
-                        // hikeDocID: hikeDocID,
+                        hikeDocID: hikeDocID,
                         userID: userID,
                         // title: Title,
                         // level: Level,
@@ -42,7 +42,7 @@ function writeReview() {
                         // scrambled: Scrambled,
                         timestamp: firebase.firestore.FieldValue.serverTimestamp()
                     }).then(() => {
-                        window.location.href = "eachHike.html"; //new line added
+                        window.location.href = "eachLocation.html"; //new line added
                     })
                 })
         } else {
