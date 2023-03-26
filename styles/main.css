@@ -1,0 +1,93 @@
+/* countries section */
+/* .countries {
+    height: 50vh;
+} */
+.countries h2 {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.first .second .thrid .fourth .fifth {
+    position: relative;
+}
+
+.first-image {
+    background-image: url(/images/map.png);
+    height: 30vh;
+    width: 100%;
+    background-size: cover;
+    font-size: 36px;
+    color: #e6b750;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+    filter: grayscale(10%);
+    transition: 0.5s;
+    background-position: top 20%;
+}
+
+
+.second-image {
+    background-image: url(/images/interior.png);
+    height: 10vh;
+    width: 100%;
+    background-size:contain;
+    background-repeat: none;
+    margin-bottom: 10px;
+    filter: grayscale(10%);
+    transition: 0.5s;
+}
+
+.thrid-image {
+    background-image: url(/images/island.png);
+    height: 50vh;
+    width: 100%;
+    background-size: cover;
+    background-position: center 10%;
+    background-position: right 15%;
+    margin-bottom: 10px;
+    filter: grayscale(10%);
+    transition: 0.5s;
+}
+
+
+.fourth-image {
+    background-image: url(/images/nh.png);
+    height: 50vh;
+    width: 100%;
+    background-size: cover;
+    font-size: 36px;
+    color: #fff;
+    text-align: center;
+    background-position: center 20%;
+    background-position: right 30%;
+    filter: grayscale(10%);
+    transition: 0.5s;
+}
+
+.first:hover,
+.second:hover,
+.thrid:hover,
+.fourth:hover .fifth:hover {
+    transform: scale(1.01);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.fifth-image {
+    background-image: url(/images/vancouver.png);
+    margin-top: 1%;
+    height: 50vh;
+    width: 100%;
+
+    /* background-position: center 20%;
+    background-position: right 30%; */
+    filter: grayscale(10%);
+    transition: 0.5s;
+}
+
+.content {
+    display: none;
+}
