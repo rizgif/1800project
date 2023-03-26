@@ -1,12 +1,13 @@
-//Global variable pointing to the current user's Firestore document
-var currentUser;   
-
-//Function that calls everything needed for the main page  
-function doAll() {
+function insertNameFromFirestore() {
+    //check if user is logged in
     firebase.auth().onAuthStateChanged(user => {
-        if (user) {
-            currentUser = db.collection("users").doc(user.uid); //global
-            console.log(currentUser);
+        if (user) { //if user logged in
+            console.log(user.uid)
+            db.collection("users").doc(user.uid).get().then(userDoc => {
+                // console.log(userDoc.data().name)
+                userName = userDoc.data().name;
+                // console.log(userName)
+                document.getElementById("name-goes-here").innerHTML = userName;
 
             // figure out what day of the week it is today
             const weekday = ["sunday", "monday", "tuesday", "wednesday", "thursday", "friday", "saturday"];
@@ -108,86 +109,126 @@ function writeHikes() {
     });
 }
 
+insertNameFromFirestore();
 
-//------------------------------------------------------------------------------
-// Input parameter is a string representing the collection we are reading from
-//------------------------------------------------------------------------------
-function displayCardsDynamically(collection) {
-    let cardTemplate = document.getElementById("hikeCardTemplate");
+// fraser health
+// Get a reference to the button by its ID
+var button1 = document.getElementById('confirm-fh');
 
-    db.collection(collection)
-        .orderBy("hike_time") //NEW LINE; what do you want to sort by?
-        .limit(2) //NEW LINE: how many do you want to get?
-        .get() //the collection called "hikes"
+// Add a click event listener to the button
+button1.addEventListener('click', function() {  
+  // Create a new object with the data to be added to the database
+  var data = {
+    locationName: "Fraser Health"
+    // add more data fields as needed
+  };
 
-        .then(allHikes => {
-            //var i = 1;  //Optional: if you want to have a unique ID for each hike
-            allHikes.forEach(doc => { //iterate thru each doc
-                var title = doc.data().name; // get value of the "name" key
-                var details = doc.data().details; // get value of the "details" key
-                var hikeCode = doc.data().code; //get unique ID to each hike to be used for fetching right image
-                var hikeLength = doc.data().length; //gets the length field
-                var docID = doc.id;
-                let newcard = cardTemplate.content.cloneNode(true);
+  // Get a reference to the "locations" collection in Firebase
+  var locationsRef = firebase.firestore().collection("locations");
 
-                //update title and text and image etc.
-                newcard.querySelector('.card-title').innerHTML = title;
-                //newcard.querySelector('.card-length').innerHTML = hikeLength + "km";
-                newcard.querySelector('.card-text').innerHTML = details;
-                newcard.querySelector('.card-image').src = `./images/${hikeCode}.jpg`; //Example: NV01.jpg
-                newcard.querySelector('a').href = "eachHike.html?docID=" + docID;
-
-                //NEW LINE: update to display length, duration, last updated
-                newcard.querySelector('.card-length').innerHTML =
-                    "Length: " + doc.data().length + " km <br>" +
-                    "Duration: " + doc.data().hike_time + "min <br>" +
-                    "Last updated: " + doc.data().last_updated.toDate().toLocaleDateString();
-
-                //NEW LINES: next 2 lines are new for demo#11
-                //this line sets the id attribute for the <i> tag in the format of "save-hikdID" 
-                //so later we know which hike to bookmark based on which hike was clicked
-                newcard.querySelector('i').id = 'save-' + docID;
-                // this line will call a function to save the hikes to the user's document             
-                newcard.querySelector('i').onclick = () => saveBookmark(docID);
+  // Add the new data to the "locations" collection
+  locationsRef.add(data)
+    .then(function(docRef) {
+      console.log("Document written with ID: ", docRef.id);
+    })
+    .catch(function(error) {
+      console.error("Error adding document: ", error);
+    });
+});
 
 
-                currentUser.get().then(userDoc => {
-                    //get the user name
-                    var bookmarks = userDoc.data().bookmarks;
-                    if (bookmarks.includes(docID)) {
-                       document.getElementById('save-' + hikeID).innerText = 'bookmark';
-                    }
-              })
+//interior health
+// Get a reference to the button by its ID
+var button2 = document.getElementById('comfirm-inter');
+
+// Add a click event listener to the button
+button2.addEventListener('click', function() {  
+  // Create a new object with the data to be added to the database
+  var data = {
+    locationName: "Interior Health"
+    // add more data fields as needed
+  };
+
+  // Get a reference to the "locations" collection in Firebase
+  var locationsRef = firebase.firestore().collection("locations");
+  // Add the new data to the "locations" collection
+  locationsRef.add(data)
+    .then(function(docRef) {
+      console.log("Document written with ID: ", docRef.id);
+    })
+    .catch(function(error) {
+      console.error("Error adding document: ", error);
+    });
+});
 
 
+//island health
+var button3 = document.getElementById('comfirm-island');
 
-                //Finally done modifying newcard
-                //attach to gallery, Example: "hikes-go-here"
-                document.getElementById(collection + "-go-here").appendChild(newcard);
+// Add a click event listener to the button
+button3.addEventListener('click', function() {  
+  // Create a new object with the data to be added to the database
+  var data = {
+    locationName: "Island Health"
+    // add more data fields as needed
+  };
 
-                //i++;   //Optional: iterate variable to serve as unique ID
-            })
-        })
-}
+  // Get a reference to the "locations" collection in Firebase
+  var locationsRef = firebase.firestore().collection("locations");
+  // Add the new data to the "locations" collection
+  locationsRef.add(data)
+    .then(function(docRef) {
+      console.log("Document written with ID: ", docRef.id);
+    })
+    .catch(function(error) {
+      console.error("Error adding document: ", error);
+    });
+});
 
-displayCardsDynamically("hikes");  //input param is the name of the collection
 
-//-----------------------------------------------------------------------------
-// This function is called whenever the user clicks on the "bookmark" icon.
-// It adds the hike to the "bookmarks" array
-// Then it will change the bookmark icon from the hollow to the solid version. 
-//-----------------------------------------------------------------------------
-function saveBookmark(hikeDocID) {
-    currentUser.set({
-            bookmarks: firebase.firestore.FieldValue.arrayUnion(hikeDocID)
-        }, {
-            merge: true
-        })
-        .then(function () {
-            console.log("bookmark has been saved for: " + currentUser);
-            var iconID = 'save-' + hikeDocID;
-            //console.log(iconID);
-						//this is to change the icon of the hike that was saved to "filled"
-            document.getElementById(iconID).innerText = 'bookmark';
-        });
-}
+//northern health
+var button4 = document.getElementById('comfirm-nh');
+
+// Add a click event listener to the button
+button4.addEventListener('click', function() {  
+  // Create a new object with the data to be added to the database
+  var data = {
+    locationName: "Northern Health"
+    // add more data fields as needed
+  };
+
+  // Get a reference to the "locations" collection in Firebase
+  var locationsRef = firebase.firestore().collection("locations");
+  // Add the new data to the "locations" collection
+  locationsRef.add(data)
+    .then(function(docRef) {
+      console.log("Document written with ID: ", docRef.id);
+    })
+    .catch(function(error) {
+      console.error("Error adding document: ", error);
+    });
+});
+
+
+//vancouver coastal health
+var button5 = document.getElementById('comfirm-vch');
+
+// Add a click event listener to the button
+button5.addEventListener('click', function() {  
+  // Create a new object with the data to be added to the database
+  var data = {
+    locationName: "Vancouver Coastal Health"
+    // add more data fields as needed
+  };
+
+  // Get a reference to the "locations" collection in Firebase
+  var locationsRef = firebase.firestore().collection("locations");
+  // Add the new data to the "locations" collection
+  locationsRef.add(data)
+    .then(function(docRef) {
+      console.log("Document written with ID: ", docRef.id);
+    })
+    .catch(function(error) {
+      console.error("Error adding document: ", error);
+    });
+});

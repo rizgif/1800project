@@ -2,11 +2,16 @@
 /* .countries {
     height: 50vh;
 } */
-.countries h2 {
+.container h2 {
     position: absolute;
-    top: 30%;
+    text-align: center;
+    font-size: 40px;
+    z-index: 10px;
+    color: white;
+    font-weight: bold;
+    /* top: 30%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%); */
 }
 
 .first .second .thrid .fourth .fifth {
@@ -14,80 +19,172 @@
 }
 
 .first-image {
-    background-image: url(/images/map.png);
-    height: 30vh;
+    background-image: url(/images/fraser_map.png);
+    height: 60vh;
     width: 100%;
     background-size: cover;
-    font-size: 36px;
-    color: #e6b750;
-    text-align: center;
+    font-size: 60px;
+    /* color: #836016; */
+    /* text-align: center;
+    justify-content: center;
+    align-items: center; */
+    margin-bottom: 10px;
+    transition: 0.5s;
+    background-position: center center;
+    /* background-position: right 5%; */
+    background-size: 75%;
+    display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-bottom: 10px;
-    filter: grayscale(10%);
-    transition: 0.5s;
-    background-position: top 20%;
+    background-repeat: no-repeat;
 }
+
+
 
 
 .second-image {
-    background-image: url(/images/interior.png);
-    height: 10vh;
+    background-image: url(/images/interior_map.png);
+    height: 60vh;
     width: 100%;
-    background-size:contain;
-    background-repeat: none;
+    background-size: cover;
+    font-size: 60px;
+    /* color: #836016; */
+    /* text-align: center;
+    justify-content: center;
+    align-items: center; */
     margin-bottom: 10px;
     filter: grayscale(10%);
     transition: 0.5s;
+    background-position: center center;
+    /* background-position: right 5%; */
+    background-size: 75%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-repeat: no-repeat;
 }
 
 .thrid-image {
-    background-image: url(/images/island.png);
-    height: 50vh;
+    background-image: url(/images/vancouver_island.png);
+    height: 60vh;
     width: 100%;
     background-size: cover;
-    background-position: center 10%;
-    background-position: right 15%;
+    font-size: 60px;
+    /* color: #836016; */
+    /* text-align: center;
+    justify-content: center;
+    align-items: center; */
     margin-bottom: 10px;
     filter: grayscale(10%);
     transition: 0.5s;
+    background-position: center center;
+    /* background-position: right 5%; */
+    background-size: 75%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-repeat: no-repeat;
 }
 
 
 .fourth-image {
-    background-image: url(/images/nh.png);
-    height: 50vh;
+    background-image: url(/images/nh_map.png);
+    height: 60vh;
     width: 100%;
     background-size: cover;
-    font-size: 36px;
-    color: #fff;
-    text-align: center;
-    background-position: center 20%;
-    background-position: right 30%;
+    font-size: 60px;
+    /* color: #836016; */
+    /* text-align: center;
+    justify-content: center;
+    align-items: center; */
+    margin-bottom: 10px;
     filter: grayscale(10%);
     transition: 0.5s;
+    background-position: center center;
+    /* background-position: right 5%; */
+    background-size: 75%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-repeat: no-repeat;
 }
 
-.first:hover,
+/* .first:hover,
 .second:hover,
 .thrid:hover,
-.fourth:hover .fifth:hover {
+.fourth:hover 
+.fifth:hover {
     transform: scale(1.01);
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-}
+
+} */
+
+
 
 .fifth-image {
-    background-image: url(/images/vancouver.png);
-    margin-top: 1%;
-    height: 50vh;
+    background-image: url(/images/vancouver_map.png);
+    height: 60vh;
     width: 100%;
-
-    /* background-position: center 20%;
-    background-position: right 30%; */
+    background-size: cover;
+    font-size: 60px;
+    /* color: #836016; */
+    /* text-align: center;
+    justify-content: center;
+    align-items: center; */
+    margin-bottom: 10px;
     filter: grayscale(10%);
     transition: 0.5s;
+    background-position: center center;
+    /* background-position: right 5%; */
+    background-size: 75%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-repeat: no-repeat;
 }
 
 .content {
     display: none;
+}
+
+
+
+.hero-btn {  
+    display: inline-block;
+    text-decoration: none;
+    color: rgb(74, 130, 175);
+    /* border: 1px solid #300707; */
+    padding: 12px 34px;
+    font-size: 20px;
+    font-weight: bold;
+    background: white;
+    position: relative;
+    cursor: pointer;
+    border-radius: 5px;
+    bottom: -100px;
+}
+
+/* .first .hero-btn:hover
+.second .hero-btn:hover
+.thrid .hero-btn:hover
+.fourth .hero-btn:hover
+.fifth .hero-btn:hover
+{
+    border: white;
+    background: rgb(74, 130, 175);
+    color: white;
+    transition: 0.5s;
+} */
+
+ .hero-btn:hover
+{
+    border: white;
+    background: rgb(74, 130, 175);
+    color: white;
+    transition: 0.5s;
 }
