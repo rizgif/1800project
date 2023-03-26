@@ -1,3 +1,5 @@
+
+
 function insertNameFromFirestore() {
   //check if user is logged in
   firebase.auth().onAuthStateChanged(user => {

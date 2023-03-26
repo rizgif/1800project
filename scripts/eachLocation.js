@@ -5,7 +5,9 @@ console.log(docId);
 function displayHikeInformation(){
     //retreive the document id from the url
     let params = new URL(window.location.href) //get the url from the searbar
-    let ID = params.searchParams.get("docID");
+    let ID = localStorage.getItem("docID");
+
+
     console.log(ID);
 
     db.collection("locations").doc(ID).get().then( thisHike =>{
@@ -15,7 +17,8 @@ function displayHikeInformation(){
 
         document.getElementById("hikeName").innerHTML=hikeName;
         let imgEvent = document.querySelector( ".hike-img" );
-        imgEvent.src = "./images/" + code + ".jpg";
+        imgEvent.src = "../images/" + hikeCode + ".jpg";
+        console.log("did it work?")
     }
 
     )
@@ -25,7 +28,7 @@ displayHikeInformation();
 
 function saveHikeDocumentIDAndRedirect(){
     let params = new URL(window.location.href) //get the url from the search bar
-    let ID = params.searchParams.get("docID");
+    let ID = localStorage.getItem("docID");
     localStorage.setItem('hikeDocID', ID);
     window.location.href = 'review.html';
 }
@@ -48,6 +51,7 @@ function populateReviews() {
                 var user = doc.data().userID; //gets the name field
                 var flooded = doc.data().flooded;
                 var timestamp = doc.data().timestamp;
+                console.log(time)
                 
 
                 let reviewCard = hikeCardTemplate.content.cloneNode(true);
