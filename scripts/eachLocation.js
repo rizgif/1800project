@@ -1,6 +1,6 @@
 // Retrieve the value of the 'docId' key from local storage
-var docId = localStorage.getItem('docId');
-console.log(docId);
+var docID = localStorage.getItem('docId');
+console.log(docID);
 
 function displayHikeInformation(){
     //retreive the document id from the url
