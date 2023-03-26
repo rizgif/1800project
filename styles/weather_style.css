@@ -9,6 +9,7 @@ body{
 .container{
     width: 400px; 
     background-color: rgba(254, 215, 102, 0.4);
+    border: 2px solid rgba(238, 116, 68, 0.8);
     
     display: block;
     margin: 0 auto;
@@ -49,6 +50,8 @@ body{
     height: 280px;
     /* background-color: #F4F9FF; */
     background-color: rgba(254, 215, 102, 0.5);
+    border-top: 2px solid rgba(238, 116, 68, 0.8);
+    border-bottom: 2px solid rgba(238, 116, 68, 0.8);
 }
 
 .weather-icon{
