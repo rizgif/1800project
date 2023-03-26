@@ -233,7 +233,7 @@ var data = {
   // Add the new data to the "locations" collection
   locationsRef.add(data)
     .then(function(docRef) {
-      window.location.href = 'eachLocation.html';
+      window.location.href = '../eachLocation.html';
       console.log("Document written with ID: ", docRef.id);
     })
     .catch(function(error) {
