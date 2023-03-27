@@ -55,7 +55,7 @@ function populateReviews() {
             Temperatures=allReviews.docs;
             
             Temperatures.forEach(doc => {
-                var user = doc.data().userID; //gets the name field
+                var user = doc.data().userName; //gets the name field
                 var flooded = doc.data().flooded;
                 var timestamp = doc.data().timestamp.toDate();
               
