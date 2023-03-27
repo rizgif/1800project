@@ -34,5 +34,7 @@ body {
 .firebaseui-container {
   border-radius: 20px;
   background: rgba(254, 215, 102, 0.6);
-  border: 2px solid rgba(238, 116, 68, 0.5);
+  border: 3px solid rgba(238, 116, 68, 0.5);
+  box-shadow: 0 0 5px rgba(238, 116, 68, 1),
+        0 0 25px rgba(238, 116, 68, 1);
 }
