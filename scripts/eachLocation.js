@@ -1,11 +1,11 @@
 // Retrieve the value of the 'docId' key from local storage
-var docID = localStorage.getItem('docId');
-console.log(docID);
+
+
 
 function displayHikeInformation(){
     //retreive the document id from the url
     let params = new URL(window.location.href) //get the url from the searbar
-    let ID = localStorage.getItem("docID");
+    let ID = localStorage.getItem("docId");
 
 
     console.log(ID);
