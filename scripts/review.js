@@ -2,6 +2,9 @@
 var docID = localStorage.getItem('docId');
 console.log(docID);
 
+var userName = localStorage.getItem('userName');
+console.log(userName);
+
 function getHikeName(id) {
     db.collection("locations")
       .doc(id)
@@ -32,6 +35,7 @@ function writeReview() {
                     db.collection("Temperatures").add({
                         // hikeDocID: hikeDocID,
                         userID: userID,
+                        userName: userName,
                         locationDocID: docID,
                         //locationCode: locationCode,
                         //locationName: locationName,
