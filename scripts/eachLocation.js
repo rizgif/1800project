@@ -24,15 +24,18 @@ function displayHikeInformation(){
     }
 
     )
-
 }
+
 displayHikeInformation();
 
 function saveHikeDocumentIDAndRedirect(){
-    let params = new URL(window.location.href) //get the url from the search bar
-    let ID = localStorage.getItem("docID");
+    // let params = new URL(window.location.href) //get the url from the search bar
+    let ID = localStorage.getItem("docId");
     localStorage.setItem('hikeDocID', ID);
+
     window.location.href = 'review.html';
+
+    
 }
 
 function populateReviews() {
@@ -41,30 +44,30 @@ function populateReviews() {
 
     //let params = new URL(window.location.href) //get the url from the searbar
     //let hikeID = params.searchParams.get("docID");
-    var hikeID = localStorage.getItem("hikeDocID");
+    let ID = localStorage.getItem("docId");
+    
+    
     
     // doublecheck: is your collection called "Reviews" or "reviews"?
-    db.collection("Temperatures").where( "hikeDocID", "==", hikeID).get()
-      
+    db.collection("Temperatures").where( "locationDocID", "==", ID).get()
+    //   console.log(ID)
         .then(allReviews => {
-            reviews=allReviews.docs;
-            console.log(reviews);
-            reviews.forEach(doc => {
+            Temperatures=allReviews.docs;
+            
+            Temperatures.forEach(doc => {
                 var user = doc.data().userID; //gets the name field
                 var flooded = doc.data().flooded;
-                var timestamp = doc.data().timestamp;
-                console.log(time)
-                
-
+                var timestamp = doc.data().timestamp.toDate();
+              
                 let reviewCard = hikeCardTemplate.content.cloneNode(true);
-                reviewCard.querySelector('.user').innerHTML = `user: ${user}`;     //equiv getElementByClassName
-                reviewCard.querySelector('.flooded').innerHTML = `user: ${flooded}`; 
-                reviewCard.querySelector('.timestamp').innerHTML = `user: ${timestamp}`; 
-                
+                reviewCard.querySelector('.user').innerHTML = `Username: ${user}`;     //equiv getElementByClassName
+                reviewCard.querySelector('.flooded').innerHTML = `Feelslike Temperature: ${flooded}`; 
+                reviewCard.querySelector('.timestamp').innerHTML = `Time: ${timestamp}`; 
             
-    
                 hikeCardGroup.appendChild(reviewCard);
             })
         })
+
+        console.log("review saved")
 }
 populateReviews();
