@@ -7,7 +7,6 @@ function displayHikeInformation(){
     let params = new URL(window.location.href) //get the url from the searbar
     let ID = localStorage.getItem("docId");
 
-
     console.log(ID);
 
     db.collection("locations").doc(ID).get().then( thisHike =>{
@@ -15,10 +14,13 @@ function displayHikeInformation(){
         hikeCode = hikeInfo.code;
         hikeName = hikeInfo.locationName;
 
+        console.log(hikeCode);
+
         document.getElementById("hikeName").innerHTML=hikeName;
         let imgEvent = document.querySelector( ".hike-img" );
         imgEvent.src = "../images/" + hikeCode + ".jpg";
-        console.log("did it work?")
+       
+        
     }
 
     )

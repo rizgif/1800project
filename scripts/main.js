@@ -70,7 +70,7 @@ button2.addEventListener('click', function () {
   locationsRef.add(data)
     .then(function (docRef) {
       localStorage.setItem('docId', docRef.id);
-      // console.log(docId);
+      console.log(docRef.id);
       window.location.href = 'eachLocation.html';
       console.log("Document written with ID: ", docRef.id);
 
