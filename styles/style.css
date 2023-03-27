@@ -27,3 +27,14 @@ body {
   background-image: linear-gradient(62deg, #f5c0c0 0%, #f9e698 49%, #fbf6f6 100%);
 
 }
+
+/* Firebase pre-built UI*/
+
+/* Change the background color of the Firebase auth UI */
+.firebaseui-container {
+  border-radius: 20px;
+  background: rgba(254, 215, 102, 0.6);
+  border: 3px solid rgba(238, 116, 68, 0.5);
+  box-shadow: 0 0 5px rgba(238, 116, 68, 1),
+        0 0 25px rgba(238, 116, 68, 1);
+}

@@ -1,4 +1,4 @@
-nav {
+#navbar {
     position: sticky;
     top: 0;
     display: flex;
@@ -15,7 +15,7 @@ nav {
     border-radius: 15px;
 
     box-shadow: 0 0 5px #FF3300,
-    0 0 25px #FF3300;
+        0 0 25px #FF3300;
 }
 
 nav #logo {
@@ -47,27 +47,24 @@ nav #i2 {
     text-decoration: none;
 }
 
-.nav-links ul li a::after {
-    content: '';
-    width: 0%;
-    height: 2px;
-    background: rgb(74, 130, 175);
+.nav-links ul li a:hover {
     display: block;
-    margin: auto;
     transition: 0.2s;
-    /* cursor:pointer;
-    -webkit-tap-highlight-color: rgba(0,0,0,0); */
+    font-weight: bold;
+    cursor:pointer;
+    /* -webkit-tap-highlight-color: rgba(0,0,0,0);  */
 }
 
 
 .nav-links ul li:hover:after {
     width: 100%;
+
 }
 
 .nav-links ul li a {
     color: #FF6653;
     text-decoration: none;
-    font-size: 22px;
+    font-size: 20px;
 }
 
 @media only screen and (max-width: 700px) {
@@ -80,8 +77,9 @@ nav #i2 {
 
     .nav-links {
         position: absolute;
+        /* display: sticky; */
         background: #ae5246;
-        height: 100vh;
+        min-height: 100vh;
         width: 200px;
         top: 0;
         right: -200px;
