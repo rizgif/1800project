@@ -16,10 +16,14 @@
 
 .dehydration {
     margin-top: 15%;
+    background-color: rgba(255, 246, 251, 0.8);
+    border-radius: 10px;
 }
 
 .hetstroke {
     margin-top: 10%;
+    background-color: rgba(255, 246, 251, 0.8);
+    border-radius: 10px;
 }
 
 .child {
