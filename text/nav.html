@@ -8,7 +8,7 @@
 </head>
 <body>
     <nav id="navbar">
-        <a href="main.html"><img alt="logo" id="logo" src="/images/logo.png"></a>
+        <a href="main.html"><img alt="logo" id="logo" src="/images/logo2.jpg"></a>
         <div class="nav-links" id="navlinks">
             <img alt="closemenu" id="i1" src="/images/mu.png" onclick="hideMenu()">
             <ul>
@@ -24,12 +24,14 @@
     <script>
         function showMenu() {
         var navLinks = document.getElementById("navlinks");
-        navLinks.style.right = "0";
+        navLinks.style.display = "inline-block";
+        // navLinks.style.right = "0";
     }
     
     function hideMenu() {
         var navLinks = document.getElementById("navlinks");
-        navLinks.style.right = "-300px";
+        navLinks.style.display = "none";
+        // navLinks.style.right = "-300px";
     }
     </script>
 
