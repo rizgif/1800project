@@ -58,11 +58,14 @@ function populateReviews() {
                 var user = doc.data().userName; //gets the name field
                 var flooded = doc.data().flooded;
                 var timestamp = doc.data().timestamp.toDate();
+                var options = { weekday: 'short', year: 'numeric', month: 'short', day: 'numeric', hour: 'numeric', minute: 'numeric', second: 'numeric', hour12: true };
+                var formattedTime = timestamp.toLocaleString('en-US', options);
+
               
                 let reviewCard = hikeCardTemplate.content.cloneNode(true);
                 reviewCard.querySelector('.user').innerHTML = `Username: ${user}`;     //equiv getElementByClassName
                 reviewCard.querySelector('.flooded').innerHTML = `Feelslike Temperature: ${flooded}`; 
-                reviewCard.querySelector('.timestamp').innerHTML = `Time: ${timestamp}`; 
+                reviewCard.querySelector('.timestamp').innerHTML = `Time: ${formattedTime}`; 
             
                 hikeCardGroup.appendChild(reviewCard);
             })
