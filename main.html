@@ -52,95 +52,34 @@
 
     <!-- the body of your page goes here -->
     <!-- stuff -->
-    <div class="header">
-        <div class="container-header">
-            <h1 class="display-4">
-                Hello, <span id="name-goes-here">Name</span>
-            </h1>
-            <hr />
-            <p>Select the your local Health Authority to update what the temperature feels like and see what others feel as well!
-            </p>
-        </div>
-    </div>
+    
 
     <div class="container">
-        <!-- <h1>Select your health authority: </h1> -->
+        <h1>Local Health Authorities in British Columbia</h1>
         <!-- Here is the container for cards  -->
-        <div class="first">
-            <!-- <h1>ok</h1> -->
-            <div class="first-image">
-                <img src="images/fh.png">
-                <h3>Locations:</h3>
-                <p>Burnaby, Coquitlam, Delta,
-                    Langley, Maple Ridge, New Westminster, Pitt Meadows, Port Moody,
-                    Surrey, and White Rock.</p>
-                <!-- <h2>Fraser Health</h2> -->
-                <a class="hero-btn" id="confirm-fh">Confirm selection</a>
-            </div>
-            <div class="content" style="background-color: #6bb9da;">
-
+        <div class="container">
+            <div id="locations-go-here" class="row row-cols-auto">
             </div>
         </div>
-
-        <div class="second">
-            <div class="second-image">
-                <img src="images/interior_logo.png">
-                <h3>Locations: </h3>
-                <p>Kelowna, Kamloops, Vernon, and Penticton.</p>
-                <!-- <h2>Interior Health</h2> -->
-                <a class="hero-btn" id="comfirm-inter">Confirm selection</a>
-            </div>
-            <div class="content" style="background-color: #b49249;">
-            </div>
-
-
-        </div>
-
-        <div class="thrid">
-            <div class="thrid-image">
-                <img src="images/island_logo.png">
-                <h3>Locations: </h3>
-                <p>Victoria, Nanaimo, Courtenay, Campbell River, and Port Alberni.
-
-                </p>
-                <!-- <h2>Island Health</h2> -->
-                <a class="hero-btn" id="comfirm-island"> Confirm selection</a>
-            </div>
-            <div class="content" style="background-color: #8757d4;">
-            </div>
-        </div>
-
-        <div class="fourth">
-            <div class="fourth-image">
-                <img src="images/nh_logo.png">
-                <h3>Locations: </h3>
-                <p>Prince George, Fort St. John, Terrace, Kitimat, and Dawson Creek.</p>
-                <!-- <h2>Northern Health</h2> -->
-                <a class="hero-btn" id="comfirm-nh"> Confirm selection</a>
-            </div>
-            <div class="content" style="background-color:#91cc43">
-            </div>
-
-        </div>
-
-        <div class="fifth">
-
-            <div class="fifth-image">
-                <img src="images/vancouver.png">
-                <h3>Locations: </h3>
-                <p> North and West Vancouver, Richmond, and Powell River.</p>
-                <!-- <h2>Vancouver Coastal
-                    <br>Health
-                </h2> -->
-                <a class="hero-btn" id="comfirm-vch"> Confirm selection</a>
-            </div>
-            <div class="content" style="background-color:#91cc43">
-            </div>
-
-        </div>
-
     </div>
 
+    <!-- Templates for general use, not displayed -->
+    <template id="hikeCardTemplate">
+        <div class="card py-2 mx-2" style="width: 18rem">
+            <img class="card-image card-img-top" src=" ..." alt="..." />
+            <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <!-- <p class="card-length">placeholder</p>
+                <br /> -->
+                <!-- <p class="card-text">
+                    Some quick example text to build on the card title and make up the
+                    bulk of the card's content.
+                </p> -->
+                <a class="btn btn-primary card-href">Select</a>
+              
+            </div>
+        </div>
+    </template>
 
 
     <!-- our own footer goes here-->
