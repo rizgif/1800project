@@ -23,6 +23,23 @@ function writeReview() {
     console.log("inside write review")
     let Flooded = document.querySelector('input[name="flooded"]:checked').value;
     //console.log(Flooded);
+    if (Flooded === "More Cooler") {
+        
+        Flooded = "The experts were wrong and the temperature is cooler than " + localStorage.getItem("currweather1");
+      } else if ( Flooded === "Cooler") {
+        Flooded = "The experts were wrong and the temperature is cooler than "+ localStorage.getItem("currweather1");
+      } 
+        else if ( Flooded === "Same") {
+        Flooded = "The experts were right"+ localStorage.getItem("currweather1");
+        
+      } 
+      else if ( Flooded === "Hotter") {
+        Flooded = "The experts were wrong and "+ localStorage.getItem("currweather1");
+      } 
+      else if ( Flooded === "More Hotter") {
+        Flooded = "The experts were right"+ localStorage.getItem("currweather1");
+      } 
+
 
     firebase.auth().onAuthStateChanged(user => {
         if (user) {
@@ -34,13 +51,15 @@ function writeReview() {
             currentUser.get()
                 .then(userDoc => {
                     var userEmail = userDoc.data().email;
+
+
+
                     db.collection("Temperatures").add({
                         // hikeDocID: hikeDocID,
                         userID: userID,
                         userName: userName,
-                        // locationDocID: docID,
-                        locationCode: hikeCode,
-                        //locationName: locationName,
+                        locationDocID: docID,
+                        
                         flooded: Flooded,
                         timestamp: firebase.firestore.FieldValue.serverTimestamp()
                     }).then(() => {
