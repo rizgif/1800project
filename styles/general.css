@@ -38,12 +38,3 @@
     vertical-align: middle;
     width: 130px;
 }
-
-a {
-    text-decoration: none;
-    color: black;
-}
-
-a:hover {
-    color: aliceblue;
-}
