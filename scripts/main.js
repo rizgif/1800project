@@ -10,7 +10,7 @@ function doAll() {
 
         
             insertNameFromFirestore();
-            displayCardsDynamically("locations");
+            // displayCardsDynamically("locations");
         } else {
             // No user is signed in.
             console.log("No user is signed in");
