@@ -11,7 +11,9 @@ function getHikeName(id) {
       .get()
       .then((thisHike) => {
         var hikeName = thisHike.data().locationName;
+        var hikeCode = thisHike.data().code;
         document.getElementById("hikeName").innerHTML = hikeName;
+        document.getElementById("hikeCode").innerHTML = hikeCode;
           });
 }
 
@@ -36,8 +38,8 @@ function writeReview() {
                         // hikeDocID: hikeDocID,
                         userID: userID,
                         userName: userName,
-                        locationDocID: docID,
-                        //locationCode: locationCode,
+                        // locationDocID: docID,
+                        locationCode: hikeCode,
                         //locationName: locationName,
                         flooded: Flooded,
                         timestamp: firebase.firestore.FieldValue.serverTimestamp()

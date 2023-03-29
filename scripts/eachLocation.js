@@ -1,7 +1,4 @@
 // Retrieve the value of the 'docId' key from local storage
-
-
-
 function displayHikeInformation(){
     //retreive the document id from the url
     let params = new URL(window.location.href) //get the url from the searbar
@@ -32,9 +29,7 @@ function saveHikeDocumentIDAndRedirect(){
     // let params = new URL(window.location.href) //get the url from the search bar
     let ID = localStorage.getItem("docId");
     localStorage.setItem('hikeDocID', ID);
-
     window.location.href = 'review.html';
-
     
 }
 
@@ -60,8 +55,7 @@ function populateReviews() {
                 var timestamp = doc.data().timestamp.toDate();
                 var options = { weekday: 'short', year: 'numeric', month: 'short', day: 'numeric', hour: 'numeric', minute: 'numeric', second: 'numeric', hour12: true };
                 var formattedTime = timestamp.toLocaleString('en-US', options);
-
-              
+           
                 let reviewCard = hikeCardTemplate.content.cloneNode(true);
                 reviewCard.querySelector('.user').innerHTML = `Username: ${user}`;     //equiv getElementByClassName
                 reviewCard.querySelector('.flooded').innerHTML = `Feelslike Temperature: ${flooded}`; 
