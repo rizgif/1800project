@@ -29,6 +29,7 @@ function writeReview() {
       } 
         else if ( Flooded === "Same") {
         Flooded = "The experts were right"+ localStorage.getItem("currweather1");
+        
       } 
       else if ( Flooded === "Hotter") {
         Flooded = "The experts were wrong and "+ localStorage.getItem("currweather1");
