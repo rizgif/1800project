@@ -82,6 +82,10 @@ function getWeather(latitude, longitude){
             weather.country = data.sys.country;
             weather.humidity = data.main.humidity;
 
+
+            let currweather = weather.temperature.value = Math.floor(data.main.temp - KELVIN);
+            localStorage.setItem('currweather1', currweather);
+
         })
         .then(function(){
             displayWeather();
