@@ -2,7 +2,7 @@
 function displayHikeInformation(){
     //retreive the document id from the url
     let params = new URL(window.location.href) //get the url from the searbar
-    let ID = localStorage.getItem("docId");
+    let ID = localStorage.getItem('docId');
 
     console.log(ID);
 

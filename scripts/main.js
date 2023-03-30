@@ -145,6 +145,9 @@ function displayCardsDynamically(collection) {
                 newcard.querySelector('a').href = "eachLocation.html?docID=" + docId;
                 console.log(docId)
 
+                localStorage.setItem("docId", docId);
+                
+
                 //NEW LINE: update to display length, duration, last updated
                 // newcard.querySelector('.card-length').innerHTML =
                 //     "Length: " + doc.data().length + " km <br>" +
