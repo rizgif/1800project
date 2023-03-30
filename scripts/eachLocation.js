@@ -59,10 +59,10 @@ function populateReviews() {
                 var formattedTime = timestamp.toLocaleString('en-US', options);
            
                 let reviewCard = hikeCardTemplate.content.cloneNode(true);
-                reviewCard.querySelector('.user').innerHTML = `Username: ${user}`;     //equiv getElementByClassName
-                reviewCard.querySelector('.flooded').innerHTML = `Feelslike Temperature: ${flooded}`; 
-                reviewCard.querySelector('.temperature').innerHTML = `Actual Temperature: ${temperature}`; 
-                reviewCard.querySelector('.timestamp').innerHTML = `Time: ${formattedTime}`; 
+                reviewCard.querySelector('.user').innerHTML = `<strong>Username: </strong> ${user}`;     //equiv getElementByClassName
+                reviewCard.querySelector('.flooded').innerHTML = `<strong>Feelslike Temperature: </strong> ${flooded}`; 
+                reviewCard.querySelector('.temperature').innerHTML = `<strong>Actual Temperature:</strong> ${temperature}`; 
+                reviewCard.querySelector('.timestamp').innerHTML = `<strong>Time:</strong> ${formattedTime}`; 
             
                 hikeCardGroup.appendChild(reviewCard);
             })

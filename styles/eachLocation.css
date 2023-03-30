@@ -35,6 +35,13 @@ body {
     /* border:1pc solid rgb(74, 130, 175); */
     border-radius: 15px;
 
-    box-shadow: 0 0 1px #FF3300,
-        0 0 5px #FF3300;
+    box-shadow: 0 0 1px #dbc927,
+        0 0 5px #dbc927;
 }
+
+.btn {
+  font-size: 12pt;
+  padding: 15px;
+  
+}
+
