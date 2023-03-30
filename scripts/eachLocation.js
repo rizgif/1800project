@@ -7,9 +7,10 @@ function displayHikeInformation(){
     console.log(ID);
 
     db.collection("locations").doc(ID).get().then( thisHike =>{
+        console.log(ID);
         hikeInfo = thisHike.data();
         hikeCode = hikeInfo.code;
-        hikeName = hikeInfo.locationName;
+        hikeName = hikeInfo.name;
 
         console.log(hikeCode);
 
@@ -52,6 +53,7 @@ function populateReviews() {
             Temperatures.forEach(doc => {
                 var user = doc.data().userName; //gets the name field
                 var flooded = doc.data().flooded;
+                var temperature = doc.data().temperature;
                 var timestamp = doc.data().timestamp.toDate();
                 var options = { weekday: 'short', year: 'numeric', month: 'short', day: 'numeric', hour: 'numeric', minute: 'numeric', second: 'numeric', hour12: true };
                 var formattedTime = timestamp.toLocaleString('en-US', options);
@@ -59,6 +61,7 @@ function populateReviews() {
                 let reviewCard = hikeCardTemplate.content.cloneNode(true);
                 reviewCard.querySelector('.user').innerHTML = `Username: ${user}`;     //equiv getElementByClassName
                 reviewCard.querySelector('.flooded').innerHTML = `Feelslike Temperature: ${flooded}`; 
+                reviewCard.querySelector('.temperature').innerHTML = `Actual Temperature: ${temperature}`; 
                 reviewCard.querySelector('.timestamp').innerHTML = `Time: ${formattedTime}`; 
             
                 hikeCardGroup.appendChild(reviewCard);

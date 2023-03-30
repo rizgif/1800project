@@ -5,6 +5,9 @@ console.log(docID);
 var userName = localStorage.getItem('userName');
 console.log(userName);
 
+var currweather1 = localStorage.getItem('currweather1') + "°C";
+console.log(currweather1);
+
 function getHikeName(id) {
     db.collection("locations")
       .doc(id)
@@ -24,20 +27,23 @@ function writeReview() {
     let Flooded = document.querySelector('input[name="flooded"]:checked').value;
     //console.log(Flooded);
     if (Flooded === "More Cooler") {
-        
-        Flooded = "The experts were wrong and the temperature is cooler than " + localStorage.getItem("currweather1");
+        Flooded = localStorage.getItem("currweather1");
+        Flooded = parseFloat(Flooded) - 5 + "°C";
       } else if ( Flooded === "Cooler") {
-        Flooded = "The experts were wrong and the temperature is cooler than "+ localStorage.getItem("currweather1");
+        Flooded = localStorage.getItem("currweather1");
+        Flooded = parseFloat(Flooded) - 2 + "°C";
       } 
         else if ( Flooded === "Same") {
-        Flooded = "The experts were right"+ localStorage.getItem("currweather1");
+        Flooded = "The experts were right"+ localStorage.getItem("currweather1") + "°C";
         
       } 
       else if ( Flooded === "Hotter") {
-        Flooded = "The experts were wrong and "+ localStorage.getItem("currweather1");
+        Flooded = localStorage.getItem("currweather1");
+        Flooded = parseFloat(Flooded) + 2 + "°C";
       } 
       else if ( Flooded === "More Hotter") {
-        Flooded = "The experts were right"+ localStorage.getItem("currweather1");
+        Flooded =  localStorage.getItem("currweather1");
+        Flooded = parseFloat(Flooded) + 5 + "°C";
       } 
 
 
@@ -59,7 +65,7 @@ function writeReview() {
                         userID: userID,
                         userName: userName,
                         locationDocID: docID,
-                        
+                        temperature: currweather1,
                         flooded: Flooded,
                         timestamp: firebase.firestore.FieldValue.serverTimestamp()
                     }).then(() => {
