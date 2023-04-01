@@ -68,6 +68,25 @@ nav #i2 {
     font-size: 24px;
 }
 
+.weather-container {
+    height: 40px;
+    height: 80%;
+}
+
+.weather-icon {
+    height: auto;
+    width: 10px;
+    /* background-color: aqua; */
+}
+
+.temperature-value p {
+    color: #293251;
+    font-size: 1.3em;
+    cursor: pointer;
+    padding-left: 16px;
+    /* background-color: yellow; */
+}
+
 @media only screen and (max-width: 700px) {
 
     .nav-links ul li {
@@ -118,6 +137,28 @@ nav #i2 {
         display: block;
         margin: auto;
         transition: 0.2s;
+    }
+
+    .temperature-value p {
+        /* padding-left: 100px; */
+        /* padding-top: 60px; */
+        color: #293251;
+        font-size: 1.3em;
+        cursor: pointer;
+        padding-left: 18px;
+        /* background-color: #FF3300; */
+    }
+    
+    .weather-icon {
+        height: auto;
+        width: 10px;
+        /* padding-bottom: 0; */
+        /* background-color: aqua; */
+    }
+
+    .weather-container {
+        padding-left: 150px;
+        height: 80%;
     }
 
 }
