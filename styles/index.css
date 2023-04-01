@@ -1,0 +1,38 @@
+.responsive {
+    width: 100%;
+    height: auto;
+  }
+
+  body {
+  /* background-image: url("../images/background.png"); */
+  /* min-height: 100vh; */
+  /* height: auto;
+  width: 100%;
+  display: flex;
+  flex-direction: column; */
+  /* background-image: url("../images/background2.png"); */
+  /* background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: linear-gradient(62deg, #f5c0c0 0%, #f9e698 49%, #fbf6f6 100%); */
+
+  min-height: 100vh;
+  width: 100%;
+  background-image: linear-gradient(62deg, #f5c0c0 0%, #f9e698 49%, #fbf6f6 100%);
+  background-position: center;
+  background-size: cover;
+  position: relative;
+}
+
+p {
+    font-size: 10pt;
+}
+
+h1 {
+    font-size: 12pt;
+}
+
+
+
+
+
