@@ -1,26 +1,34 @@
 // Retrieve the value of the 'docId' key from local storage
-var docID = localStorage.getItem('docId');
-console.log(docID);
+// var docID = localStorage.getItem('docId');
+// console.log(docID);
+
+let params = new URL(window.location.href) //get the url from the search bar
+let ID = params.searchParams.get("ID");
+
+console.log(ID);
 
 var userName = localStorage.getItem('userName');
-console.log(userName);
+// console.log(userName);
 
 var currweather1 = localStorage.getItem('currweather1') + "°C";
-console.log(currweather1);
+// console.log(currweather1);
 
 function getHikeName(id) {
+  console.log(id);
     db.collection("locations")
       .doc(id)
       .get()
       .then((thisHike) => {
-        var hikeName = thisHike.data().locationName;
+        var hikeName = thisHike.data().name;
         var hikeCode = thisHike.data().code;
         document.getElementById("hikeName").innerHTML = hikeName;
+        console.log(hikeName);
         document.getElementById("hikeCode").innerHTML = hikeCode;
+        console.log(hikeCode);
           });
 }
 
-getHikeName(docID);
+getHikeName(ID);
 
 function writeReview() {
     console.log("inside write review")
@@ -64,12 +72,12 @@ function writeReview() {
                         // hikeDocID: hikeDocID,
                         userID: userID,
                         userName: userName,
-                        locationDocID: docID,
+                        locationDocID: ID,
                         temperature: currweather1,
                         flooded: Flooded,
                         timestamp: firebase.firestore.FieldValue.serverTimestamp()
                     }).then(() => {
-                        window.location.href = "eachLocation.html"; //new line added
+                        window.location.href = 'eachLocation.html?ID=' + ID; //new line added
                     })
                 })
         } else {
