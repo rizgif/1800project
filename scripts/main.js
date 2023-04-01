@@ -143,9 +143,9 @@ function displayCardsDynamically(collection) {
                 // newcard.querySelector('.card-text').innerHTML = details;
                 newcard.querySelector('.card-image').src = `./images/${hikeCode}.jpg`; //Example: NV01.jpg
                 newcard.querySelector('a').href = "eachLocation.html?docID=" + docId;
-                console.log(docId)
+                //alert(docId)
 
-                localStorage.setItem("docId", docId);
+                //localStorage.setItem("docId", docId);
                 
 
                 //NEW LINE: update to display length, duration, last updated

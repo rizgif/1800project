@@ -1,3 +1,21 @@
+
+// Run all this to figure out where the user currently is
+var locationID;
+function getCurrentLocation(){
+
+  //get geolocation
+  //if lat and lng within some bodary
+  //    id = "7Tlkdjaudfois"
+  //else if ....
+  //    id = sndljafldsf
+
+  locationID = id;
+}
+getCurrentLocation();
+
+
+
+
 // Initialize the FirebaseUI Widget using Firebase.
 var ui = new firebaseui.auth.AuthUI( firebase.auth() );
 
@@ -26,7 +44,8 @@ var uiConfig = {
                 // 
                   console.log("New user added to firestore:" + user.displayName);
                   localStorage.setItem('userName', user.displayName);
-                  window.location.assign("main.html");       //re-direct to main.html after signup
+   
+                  window.location.assign('eachLocation.html?ID=' + locationID);       //re-direct to main.html after signup
               })
               .catch(function (error) {
                   console.log("Error adding new user: " + error);
@@ -44,7 +63,7 @@ var uiConfig = {
   },
   // Will use popup for IDP Providers sign-in flow instead of the default, redirect.
   signInFlow: 'popup',
-  signInSuccessUrl: 'main.html',
+  signInSuccessUrl: 'eachLocation.html?ID=' + locationID,
   signInOptions: [
     // Leave the lines as is for the providers you want to offer your users.
     //   firebase.auth.GoogleAuthProvider.PROVIDER_ID,
@@ -61,3 +80,6 @@ var uiConfig = {
 };
 
 ui.start( '#firebaseui-auth-container', uiConfig );
+
+
+}

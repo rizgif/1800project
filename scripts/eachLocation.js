@@ -2,7 +2,10 @@
 function displayHikeInformation(){
     //retreive the document id from the url
     let params = new URL(window.location.href) //get the url from the searbar
-    let ID = localStorage.getItem('docId');
+    
+    let ID = params.searchParams.get("docID");
+
+    //let ID = localStorage.getItem('docId');
 
     console.log(ID);
 
@@ -38,14 +41,15 @@ function populateReviews() {
     let hikeCardTemplate = document.getElementById("reviewCardTemplate");
     let hikeCardGroup = document.getElementById("reviewCardGroup");
 
-    //let params = new URL(window.location.href) //get the url from the searbar
-    //let hikeID = params.searchParams.get("docID");
-    let ID = localStorage.getItem("docId");
-    
-    
+    let params = new URL(window.location.href) //get the url from the searbar
+    let ID = params.searchParams.get("docID");
+    //let ID = localStorage.getItem("docId");
+    //console.log(ID);
     
     // doublecheck: is your collection called "Reviews" or "reviews"?
-    db.collection("Temperatures").where( "locationDocID", "==", ID).get()
+    db.collection("Temperatures")
+    .where( "locationDocID", "==", ID)
+    .get()
     //   console.log(ID)
         .then(allReviews => {
             Temperatures=allReviews.docs;
