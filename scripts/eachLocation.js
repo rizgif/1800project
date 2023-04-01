@@ -3,7 +3,7 @@ function displayHikeInformation(){
     //retreive the document id from the url
     let params = new URL(window.location.href) //get the url from the searbar
     
-    let ID = params.searchParams.get("docID");
+    let ID = params.searchParams.get("ID");
 
     //let ID = localStorage.getItem('docId');
 
@@ -17,7 +17,7 @@ function displayHikeInformation(){
 
         console.log(hikeCode);
 
-        document.getElementById("hikeName").innerHTML=hikeName;
+        document.getElementById("hikeName").innerHTML="Based on your location, you are in " + hikeName;
         let imgEvent = document.querySelector( ".hike-img" );
         imgEvent.src = "../images/" + hikeCode + ".jpg";
        
