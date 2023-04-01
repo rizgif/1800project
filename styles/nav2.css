@@ -26,14 +26,14 @@ nav #logo {
 }
 
 nav #i1,
-/* nav #i2 {
+nav #i2 {
     width: 30px;
     height: 30px;
     padding: 5px;
     border: 2px solid #FF3300;
     display: none;
     cursor: pointer;
-} */
+}
 
 .nav-links {
     flex: 1;
