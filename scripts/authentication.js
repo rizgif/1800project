@@ -26,7 +26,7 @@ var uiConfig = {
                 // 
                   console.log("New user added to firestore:" + user.displayName);
                   localStorage.setItem('userName', user.displayName);
-                  window.location.assign("main.html");       //re-direct to main.html after signup
+                  window.location.assign("eachLocation.html");       //re-direct to main.html after signup
               })
               .catch(function (error) {
                   console.log("Error adding new user: " + error);
