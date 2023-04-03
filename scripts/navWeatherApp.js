@@ -1,16 +1,16 @@
 // SELECT ELEMENTS
-const iconElement = document.querySelector(".weather-icon");
-const tempElement = document.querySelector(".temperature-value p");
-const humidityElement = document.querySelector(".humidity p");
-const descElement = document.querySelector(".temperature-description p");
-const locationElement = document.querySelector(".location p");
-const notificationElement = document.querySelector(".notification");
+var iconElement = document.querySelector(".weather-icon");
+var tempElement = document.querySelector(".temperature-value p");
+//var humidityElement = document.querySelector(".humidity p");
+var descElement = document.querySelector(".temperature-description p");
+var locationElement = document.querySelector(".location p");
+var notificationElement = document.querySelector(".notification");
 
 
 // import { calculateHeatIndex } from './heat_index.js';
 
 // App data
-const weather = {};
+var weather = {};
 
 weather.temperature = {
     unit : "celsius"
@@ -18,9 +18,9 @@ weather.temperature = {
 weather.humidity = null;
 
 // APP CONSTS AND VARS
-const KELVIN = 273;
+var KELVIN = 273;
 // API KEY
-const key = "6964a818ca33d544a0f155f56068549e";
+var key = "6964a818ca33d544a0f155f56068549e";
 
 // CHECK IF BROWSER SUPPORTS GEOLOCATION
 if('geolocation' in navigator){

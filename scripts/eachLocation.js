@@ -7,11 +7,12 @@ function displayHikeInformation(){
 
     //let ID = localStorage.getItem('docId');
 
-    console.log(ID);
-
+    console.log("ID", ID);
+    
     db.collection("locations").doc(ID).get().then( thisHike =>{
         console.log(ID);
         hikeInfo = thisHike.data();
+        console.log("hikeInfo",hikeInfo);
         hikeCode = hikeInfo.code;
         hikeName = hikeInfo.name;
 
