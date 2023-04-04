@@ -15,7 +15,7 @@ var weather = {};
 weather.temperature = {
     unit : "celsius"
 }
-weather.humidity = null;
+//weather.humidity = null;
 
 // APP CONSTS AND VARS
 var KELVIN = 273;
@@ -80,7 +80,7 @@ function getWeather(latitude, longitude){
             weather.iconId = data.weather[0].icon;
             weather.city = data.name;
             weather.country = data.sys.country;
-            weather.humidity = data.main.humidity;
+            //weather.humidity = data.main.humidity;
 
 
             let currweather = weather.temperature.value = Math.floor(data.main.temp - KELVIN);
@@ -98,14 +98,14 @@ function getWeather(latitude, longitude){
 function displayWeather(){
     iconElement.innerHTML = `<img src="icons2/${weather.iconId}.png"/>`;
     tempElement.innerHTML = `${weather.temperature.value}°<span>C</span>`;
-    humidityElement.innerHTML = `Humidity: ${weather.humidity}%`;
+    //humidityElement.innerHTML = `Humidity: ${weather.humidity}%`;
     descElement.innerHTML = weather.description;
     locationElement.innerHTML = `${weather.city}, ${weather.country}`;
     // console.log('Temperature:', weather.temperature.value);
     // console.log('humidity: :', weather.humidity);
     
     //store the humidity to local storage, in order to calculate the heat index
-    localStorage.setItem("humidity", weather.humidity);
+    //localStorage.setItem("humidity", weather.humidity);
     
 }
 
