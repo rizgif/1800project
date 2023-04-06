@@ -51,6 +51,8 @@ function populateReviews() {
 
     db.collection("Temperatures")
     .where( "locationDocID", "==", ID)
+    //.orderBy("timestamp") //NEW LINE; what do you want to sort by?
+    //.limit(5) //NEW LINE: how many do you want to get?
     .get()
     //   console.log(ID)
         .then(allReviews => {
