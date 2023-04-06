@@ -48,7 +48,7 @@ function populateReviews() {
     //let ID = localStorage.getItem("docId");
     //console.log(ID);
     
-    // doublecheck: is your collection called "Reviews" or "reviews"?
+
     db.collection("Temperatures")
     .where( "locationDocID", "==", ID)
     .get()
