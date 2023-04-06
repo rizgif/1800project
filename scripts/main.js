@@ -94,11 +94,7 @@ function displayCardsDynamically(collection) {
                 newcard.querySelector('a').href = "eachLocation.html?ID=" + ID;
                 //alert(docId)
 
-<<<<<<< HEAD
                 // localStorage.setItem("docId", docId);
-=======
-                //localStorage.setItem("docId", docId);
->>>>>>> d91fcb590f7f2f503638e4a1e0a8dff50fa37967
                 
 
                 //NEW LINE: update to display length, duration, last updated
