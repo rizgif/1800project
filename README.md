@@ -84,13 +84,50 @@ Content of the project folder:
 It has the following subfolders and files:
 ├── .git                     # Folder for git repo
 ├── images                   # Folder for images
-    /blah.jpg                # Acknowledge source
+    /advisor.svg             # https://freesvg.org/sv
+    /dehydration_img1.jpeg   # https://pixabay.com
+    /dehydration_img2.jpeg   # https://pixabay.com
+    /dehydration_img3.jpeg   # https://pixabay.com
+    /emergency-call.svg      # https://freesvg.org/sv
+    /emergency.svg           # https://freesvg.org/sv
+    fraserhealth.jpg         # https://www2.gov.bc.ca/gov/content/data/geographic-data-services/land-use/
+                               administrative-boundaries/health-boundaries
+    heatprologo.png          # https://www.flaticon.com
+    heatstroke_img1.png      # https://pixabay.com
+    heatstroke_img2.jpeg     # https://pixabay.com
+    heatstroke_img3.webp     # https://pixabay.com
+    info.png                 # https://pixabay.com
+    interiorhealth.jpg       # https://www2.gov.bc.ca/gov/content/data/geographic-data-services/land-use/
+                               administrative-boundaries/health-boundaries
+    islandhealth.jpg         # https://www2.gov.bc.ca/gov/content/data/geographic-data-services/land-use/
+                               administrative-boundaries/health-boundaries
+    logo2.jpg                # https://looka.com
+    menu.png                 # https://www.flaticon.com   
+    mu.png                   # https://www.flaticon.com
+    northernhealth.jpg       # https://www2.gov.bc.ca/gov/content/data/geographic-data-services/land-use/
+                               administrative-boundaries/health-boundaries
+    personal.svg             # https://freesvg.org/sv
+    phone-call.svg           # https://freesvg.org/sv
+    public.svg               # https://freesvg.org/sv
+    vancouver_island.png     # https://www2.gov.bc.ca/gov/content/data/geographic-data-services/land-use/
+                               administrative-boundaries/health-boundaries
+    vancouver.jpg            # https://www2.gov.bc.ca/gov/content/data/geographic-data-services/land-use/
+                               administrative-boundaries/health-boundaries
 ├── scripts                  # Folder for scripts
     /blah.js                 # 
 ├── styles                   # Folder for styles
-    /blah.css                # 
-
-
+    /eachLocation.css        # style for the each location page.
+    /emergency.css           # style for the emergency page.
+    /footer.css              # style for the footer.html.
+    /general_info.css        # style for the dehydration.html and heatstroke.html.
+    /index.css               # style for the index page.
+    /login.css               # style for the login page.
+    /main.css                # style for the main page.
+    /nav2.css                # style for the nav.html.
+    /profile.css             # style for the user profile page.
+    /review_style.css        # style for the temperature report page.
+    /style.css               # style for the heatpro app.
+    /weather_style.css       # style for the weather api.
 
 ```
 
