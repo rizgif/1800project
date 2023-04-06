@@ -86,7 +86,24 @@ It has the following subfolders and files:
 ├── images                   # Folder for images
     /blah.jpg                # Acknowledge source
 ├── scripts                  # Folder for scripts
-    /blah.js                 # 
+    /authentication.js       # Get user current location
+                               Initializes firebase UI
+                               Write user info to firestore db
+    /eachLocation.js         # Display and save location info and
+                               populate reports
+    /firebaseAPI_heatpro.js  # Configures and initialize firebase db
+    /main.js                 # Run contents on main page, write the 
+                               health authority region to the database, and display the temperature reports
+    /navWeatherApp.js        # Runs weather api in the navigation
+                               bar
+    /profile.js              # Populate user info into the user 
+                               profile page. Runs js for the edit and save button. 
+    /review.js               # Gets the user's current location and 
+                               translates user temperature input into a numerical format to be stored in the firestore database. 
+    /skeleton.js             # Loads skeleton of html pages that 
+                               includes navbar and footer. 
+    /weatherApp.js           # Runs weather api into the html page. 
+
 ├── styles                   # Folder for styles
     /blah.css                # 
 
