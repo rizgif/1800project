@@ -32,26 +32,26 @@ getHikeName(ID);
 
 function writeReview() {
     console.log("inside write review")
-    let Flooded = document.querySelector('input[name="flooded"]:checked').value;
+    let feelslikeTemperature = document.querySelector('input[name="feelslikeTemperature"]:checked').value;
     //console.log(Flooded);
-    if (Flooded === "More Cooler") {
-        Flooded = localStorage.getItem("currweather1");
-        Flooded = parseFloat(Flooded) - 5 + "°C";
-      } else if ( Flooded === "Cooler") {
-        Flooded = localStorage.getItem("currweather1");
-        Flooded = parseFloat(Flooded) - 2 + "°C";
+    if (feelslikeTemperature === "More Cooler") {
+      feelslikeTemperature = localStorage.getItem("currweather1");
+      feelslikeTemperature = parseFloat(feelslikeTemperature) - 5 + "°C";
+      } else if ( feelslikeTemperature === "Cooler") {
+        feelslikeTemperature = localStorage.getItem("currweather1");
+        feelslikeTemperature = parseFloat(feelslikeTemperature) - 2 + "°C";
       } 
-        else if ( Flooded === "Same") {
-        Flooded = "The experts were right"+ localStorage.getItem("currweather1") + "°C";
+        else if ( feelslikeTemperature === "Same") {
+          feelslikeTemperature = "The experts were right"+ localStorage.getItem("currweather1") + "°C";
         
       } 
-      else if ( Flooded === "Hotter") {
-        Flooded = localStorage.getItem("currweather1");
-        Flooded = parseFloat(Flooded) + 2 + "°C";
+      else if ( feelslikeTemperature === "Hotter") {
+        feelslikeTemperature = localStorage.getItem("currweather1");
+        feelslikeTemperature = parseFloat(feelslikeTemperature) + 2 + "°C";
       } 
-      else if ( Flooded === "More Hotter") {
-        Flooded =  localStorage.getItem("currweather1");
-        Flooded = parseFloat(Flooded) + 5 + "°C";
+      else if ( feelslikeTemperature === "More Hotter") {
+        feelslikeTemperature =  localStorage.getItem("currweather1");
+        feelslikeTemperature = parseFloat(feelslikeTemperature) + 5 + "°C";
       } 
 
 
@@ -64,7 +64,7 @@ function writeReview() {
             //get the document for current user.
             currentUser.get()
                 .then(userDoc => {
-                    var userEmail = userDoc.data().email;
+                    //var userEmail = userDoc.data().email;
 
 
 
@@ -73,8 +73,8 @@ function writeReview() {
                         userID: userID,
                         userName: userName,
                         locationDocID: ID,
-                        temperature: currweather1,
-                        flooded: Flooded,
+                        actualTemperature: currweather1,
+                        feelslikeTemperature: feelslikeTemperature,
                         timestamp: firebase.firestore.FieldValue.serverTimestamp()
                     }).then(() => {
                         window.location.href = 'eachLocation.html?ID=' + ID; //new line added
