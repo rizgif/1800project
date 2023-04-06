@@ -64,7 +64,7 @@ function writeReview() {
             //get the document for current user.
             currentUser.get()
                 .then(userDoc => {
-                    var userEmail = userDoc.data().email;
+                    //var userEmail = userDoc.data().email;
 
 
 
@@ -73,7 +73,7 @@ function writeReview() {
                         userID: userID,
                         userName: userName,
                         locationDocID: ID,
-                        temperature: currweather1,
+                        actualTemperature: currweather1,
                         feelslikeTemperature: feelslikeTemperature,
                         timestamp: firebase.firestore.FieldValue.serverTimestamp()
                     }).then(() => {
