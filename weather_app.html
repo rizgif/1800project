@@ -1,48 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
     <title>Weather App - JavaScript</title>
-    <link rel="stylesheet" href="font/Rimouski.css">
-    <link rel="stylesheet" href="styles/weather_style.css">
-</head>
+    <link rel="stylesheet" href="font/Rimouski.css" />
+    <link rel="stylesheet" href="styles/weather_style.css" />
+  </head>
 
-<body>
-
+  <body>
     <div class="container">
-        <div class="app-title">
-            <p>Weather</p>
+      <div class="app-title">
+        <p>Weather</p>
+      </div>
+      <div class="notification"></div>
+      <div class="weather-container">
+        <div class="weather-icon">
+          <img src="icons/unknown.png" alt="" />
         </div>
-        <div class="notification"> </div>
-        <div class="weather-container">
-            <div class="weather-icon">
-                <img src="icons/unknown.png" alt="">
-            </div>
-            <div class="temperature-value">
-                <p>- °<span>C</span></p>
-            </div>
-
-            <div class="humidity">
-                <p>- %</p>
-            </div>
-
-            <div class="temperature-description">
-                <p> - </p>
-            </div>
-            <div class="location">
-                <p>-</p>
-            </div>
-
-
+        <div class="temperature-value">
+          <p>- °<span>C</span></p>
         </div>
+
+        <div class="humidity">
+          <p>- %</p>
+        </div>
+
+        <div class="temperature-description">
+          <p>-</p>
+        </div>
+        <div class="location">
+          <p>-</p>
+        </div>
+      </div>
     </div>
     <script src="./scripts/firebaseAPI_heatpro.js"></script>
     <script src="scripts/skeleton.js"></script>
     <script src="scripts/weatherApp.js"></script>
-    <script>
-
-    </script>
-</body>
-
+    <script></script>
+  </body>
 </html>

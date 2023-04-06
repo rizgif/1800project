@@ -1,82 +1,74 @@
-*{
-    /* padding: 0;
-    margin: 0;
-    box-sizing: border-box; */
+body {
+  display: grid;
+  font-family: "Poppins", sans-serif;
 }
-body{
-    /* background-color: #151320; */
-    /* height: 100vh; */
-    display: grid;
-    /* place-items: center center; */
-    font-family: 'Poppins',sans-serif;
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  padding: 20px;
+  grid-gap: 40px;
 }
-.cards{
-    display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(400px,1fr));
-    padding: 20px;
-    grid-gap: 40px;
+.card {
+  background-color: #ff6653;
+  border-radius: 20px;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
 }
-.card{
-    background-color: #FF6653;
-    border-radius: 20px;
-    box-shadow: 0 0 30px rgba(0,0,0,0.5);
+.container {
+  position: relative;
+  clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
 }
-.container{
-    position: relative;
-    clip-path: polygon(0 0,100% 0, 100% 85%, 0 100%);
+img {
+  width: 100%;
+  display: block;
+  border-radius: 20px 20px 0 0;
 }
-img{
-    width: 100%;
-    display: block;
-    border-radius: 20px 20px 0 0;
+.container:after {
+  content: "";
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 20px 20px 0 0;
+  opacity: 0.7;
 }
-.container:after{
-    content: "";
-    height: 100%;
-    width: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    border-radius: 20px 20px 0 0;
-    opacity: 0.7;
+.card1 > .container:after {
+  background-image: linear-gradient(
+    135deg,
+    rgba(1, 0, 236, 0.4),
+    rgba(250, 235, 215, 0.5)
+  );
 }
-.card1>.container:after{
-    background-image: linear-gradient(
-        135deg,
-        rgba(1, 0, 236, 0.4),
-        rgba(250, 235, 215, 0.5)
-    );
+.card2 > .container:after {
+  background-image: linear-gradient(
+    135deg,
+    rgba(43, 220, 227, 0.4),
+    rgba(250, 235, 215, 0.5)
+  );
 }
-.card2>.container:after{
-    background-image: linear-gradient(
-        135deg,
-        rgba(43, 220, 227, 0.4),
-        rgba(250, 235, 215, 0.5)
-    );
+.card3 > .container:after {
+  background-image: linear-gradient(
+    135deg,
+    rgba(255, 171, 29, 0.4),
+    rgba(250, 235, 215, 0.5)
+  );
 }
-.card3>.container:after{
-    background-image: linear-gradient(
-        135deg,
-        rgba(255, 171, 29, 0.4),
-        rgba(250, 235, 215, 0.5)
-    );
+.details {
+  padding: 20px 10px;
 }
-.details{
-    padding: 20px 10px;
+.details > h3 {
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 18px;
+  margin: 10px 0 15px 0;
 }
-.details>h3{
-    color: #ffffff;
-    font-weight: 600;
-    font-size: 18px;
-    margin: 10px 0 15px 0;
-}
-.details>p{
-    color: #ffffff;
-    font-size: 15px;
-    line-height: 30px;
-    font-weight: 400;
+.details > p {
+  color: #ffffff;
+  font-size: 15px;
+  line-height: 30px;
+  font-weight: 400;
 }
 
 .emoji {
-    font-size: 2rem;
+  font-size: 2rem;
 }
