@@ -1,48 +1,25 @@
-/*-------------------------------------
- * customize material design icon sizes 
- *-------------------------------------
- */
-/* 
-.material-icons.md-18 { font-size: 18px; }
-.material-icons.md-24 { font-size: 24px; }
-.material-icons.md-36 { font-size: 36px; }
-.material-icons.md-48 { font-size: 48px; }
-*/
-
-/* button is in image */
 .responsive {
   width: 100%;
   height: auto;
 }
 
 body {
-  /* background-image: url("../images/background.png"); */
-  /* min-height: 100vh; */
-  /* height: auto;
-  display: flex;
-  flex-direction: column; */
-  /* background-image: url("../images/background2.png"); */
-  /* background-repeat: no-repeat;
-  background-color: #f5c0c0;
-  background-image: linear-gradient(62deg, #f5c0c0 0%, #f9e698 49%, #fbf6f6 100%); */
-
   min-height: 100vh;
   width: 100%;
-  background-image: linear-gradient(62deg, #f5c0c0 0%, #f9e698 49%, #fbf6f6 100%);
+  background-image: linear-gradient(
+    62deg,
+    #f5c0c0 0%,
+    #f9e698 49%,
+    #fbf6f6 100%
+  );
   background-position: center;
   background-size: cover;
   position: relative;
-
-
 }
 
-/* Firebase pre-built UI*/
-
-/* Change the background color of the Firebase auth UI */
 .firebaseui-container {
   border-radius: 20px;
   background: rgba(254, 215, 102, 0.6);
   border: 3px solid rgba(238, 116, 68, 0.5);
-  box-shadow: 0 0 5px rgba(238, 116, 68, 1),
-        0 0 25px rgba(238, 116, 68, 1);
+  box-shadow: 0 0 5px rgba(238, 116, 68, 1), 0 0 25px rgba(238, 116, 68, 1);
 }

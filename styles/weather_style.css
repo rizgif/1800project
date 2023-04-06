@@ -1,121 +1,104 @@
-*{
-    font-family: "Rimouski";
+* {
+  font-family: "Rimouski";
 }
 
-body{
-    /* background-image: url('https://htmlcolorcodes.com/assets/images/html-color-codes-color-tutorials-hero.jpg'); */
+.container {
+  width: 400px;
+  background-color: rgba(254, 215, 102, 0.4);
+  border: 2px solid rgba(238, 116, 68, 0.8);
+
+  display: block;
+  margin: 0 auto;
+
+  border-radius: 10px;
+  padding-bottom: 50px;
 }
 
-.container{
-    width: 400px; 
-    background-color: rgba(254, 215, 102, 0.4);
-    border: 2px solid rgba(238, 116, 68, 0.8);
-    
-    display: block;
-    margin: 0 auto;
-    
-    border-radius: 10px;
-    padding-bottom : 50px;
+.app-title {
+  width: 400px;
+  height: 50px;
+  border-radius: 10px 10px 0 0;
 }
 
-.app-title{
-    width: 400px;
-    height: 50px;
-    border-radius: 10px 10px 0 0;
+.app-title p {
+  text-align: center;
+  padding: 15px;
+  margin: 0 auto;
+  font-size: 1.2em;
+  color: #293251;
 }
 
-.app-title p{
-    text-align: center;
-    padding: 15px;
-    margin: 0 auto;
-    font-size: 1.2em;
-    color: #293251;
+.notification {
+  background-color: #f8d7da;
+  display: none;
 }
 
-.notification{
-    background-color: #f8d7da;
-    display: none;
+.notification p {
+  color: #293251;
+  font-size: 1.2em;
+  margin: 0;
+  text-align: center;
+  padding: 10px 0;
 }
 
-.notification p{
-    color: #293251;
-    font-size: 1.2em;
-    margin: 0;
-    text-align: center;
-    padding: 10px 0;
+.weather-container {
+  width: 400px;
+  height: 280px;
+  /* background-color: #F4F9FF; */
+  background-color: rgba(254, 215, 102, 0.5);
+  border-top: 2px solid rgba(238, 116, 68, 0.8);
+  border-bottom: 2px solid rgba(238, 116, 68, 0.8);
 }
 
-.weather-container{
-    width: 400px;
-    height: 280px;
-    /* background-color: #F4F9FF; */
-    background-color: rgba(254, 215, 102, 0.5);
-    border-top: 2px solid rgba(238, 116, 68, 0.8);
-    border-bottom: 2px solid rgba(238, 116, 68, 0.8);
+.weather-icon {
+  width: 400px;
+  height: 115px;
 }
 
-.weather-icon{
-    width: 400px;
-    height: 115px;
+.weather-icon img {
+  display: block;
+  margin: 0 auto;
 }
 
-.weather-icon img{
-    display: block;
-    margin: 0 auto;
+.temperature-value {
+  width: 400px;
+  height: 53px;
 }
 
-.temperature-value{
-    width: 400px;
-    height: 53px;
+.temperature-value p {
+  padding: 0;
+  margin: 0;
+  color: #293251;
+  font-size: 4em;
+  text-align: center;
+  cursor: pointer;
 }
 
-.temperature-value p{
-    padding: 0;
-    margin: 0;
-    color: #293251;
-    font-size: 4em;
-    text-align: center;
-    cursor: pointer;
-}
-
-/* .temperature-value p:hover{
-    
-} */
-
-.temperature-value span{
-    color: #293251;
-    font-size: 0.5em;
+.temperature-value span {
+  color: #293251;
+  font-size: 0.5em;
 }
 
 .humidity {
-    margin-top: 5%;
-    color: #293251;
-    text-align: center;
-    cursor: pointer;
-    font-size: 1.2em;
+  margin-top: 5%;
+  color: #293251;
+  text-align: center;
+  cursor: pointer;
+  font-size: 1.2em;
 }
 
-/* .temperature-description{
-    
-} */
-
-.temperature-description p{
-    padding: 5px;
-    margin: 0;
-    color: #293251;
-    text-align: center;
-    font-size: 1.2em;
+.temperature-description p {
+  padding: 5px;
+  margin: 0;
+  color: #293251;
+  text-align: center;
+  font-size: 1.2em;
 }
 
-/* .location{
-    
-} */
-
-.location p{
-    margin: 0;
-    padding: 0;
-    color: #293251;
-    text-align: center;
-    font-size: 0.8em;
+.location p {
+  margin: 0;
+  padding: 0;
+  color: #293251;
+  text-align: center;
+  font-size: 0.8em;
 }
-

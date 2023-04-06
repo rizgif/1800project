@@ -1,64 +1,52 @@
 body {
-    /* background-image: url("../images/background.png"); */
-    /* min-height: 100vh; */
-    height: auto;
-    display: flex;
-    flex-direction: column;
-    /* background-image: url("../images/background2.png"); */
-    background-repeat: no-repeat;
-    background-color: #f5c0c0;
-    background-image: linear-gradient(62deg, #f5c0c0 0%, #f9e698 49%, #fbf6f6 100%);
-  
-  }
-
-  .responsive {
-    width: 100%;
-    height: auto;
-  }
-  
-
-
-.card {
-    position: sticky;
-    top: 0;
-    display: flex;
-    padding: 1% 4%;
-    justify-content: space-between;
-    align-items: center;
-    background-color: white;
-    opacity: 1;
-    z-index: 5;
-    font-size: 20pt;
-    /* border-bottom: 1px solid rgb(74, 130, 175); */
-
-    margin: 2%;
-    /* border:1pc solid rgb(74, 130, 175); */
-    border-radius: 15px;
-
-    box-shadow: 0 0 1px #dbc927,
-        0 0 5px #dbc927;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  background-repeat: no-repeat;
+  background-color: #f5c0c0;
+  background-image: linear-gradient(
+    62deg,
+    #f5c0c0 0%,
+    #f9e698 49%,
+    #fbf6f6 100%
+  );
 }
 
-/* .btn {
-  font-size: 12pt;
-  padding: 15px;
-  
-} */
+.responsive {
+  width: 100%;
+  height: auto;
+}
+
+.card {
+  position: sticky;
+  top: 0;
+  display: flex;
+  padding: 1% 4%;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  opacity: 1;
+  z-index: 5;
+  font-size: 20pt;
+
+  margin: 2%;
+  border-radius: 15px;
+
+  box-shadow: 0 0 1px #dbc927, 0 0 5px #dbc927;
+}
 
 .btn_submit {
-      border: double 5px transparent;
-      background-color: #FF6653; /*#FF8575*/
-      width: 23rem;
-      height: 2.5rem;
-      border-radius: 2rem;
-      box-shadow: 0 0 5px #FF3300,
-      0 0 25px #FF3300;
-      color: floralwhite;
-      font-size: 13pt;
-  }
-    
-  button:hover {
-      box-shadow: 0 0 5px #FF3300,
-      0 0 15px #FF3300, 0 0 30px #FF3300,
-      0 0 50px #FF3300, 0 0 100px #FF3300;
-  }
+  border: double 5px transparent;
+  background-color: #ff6653; /*#FF8575*/
+  width: 23rem;
+  height: 2.5rem;
+  border-radius: 2rem;
+  box-shadow: 0 0 5px #ff3300, 0 0 25px #ff3300;
+  color: floralwhite;
+  font-size: 13pt;
+}
+
+button:hover {
+  box-shadow: 0 0 5px #ff3300, 0 0 15px #ff3300, 0 0 30px #ff3300,
+    0 0 50px #ff3300, 0 0 100px #ff3300;
+}
