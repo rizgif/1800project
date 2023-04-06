@@ -11,19 +11,23 @@ function populateUserInfo() {
             currentUser.get()
                 .then(userDoc => {
                     //get the data fields of the user
-                    var userName = userDoc.data().name;
-                    var userSchool = userDoc.data().school;
-                    var userCity = userDoc.data().city;
+                    var country = userDoc.data().country;
+                    var email = userDoc.data().email;
+                    var name = userDoc.data().name;
+                    var school = userDoc.data().school;
 
                     //if the data fields are not empty, then write them in to the form.
                     if (userName != null) {
-                        document.getElementById("nameInput").value = userName;
+                        document.getElementById("country").value = country;
                     }
                     if (userSchool != null) {
-                        document.getElementById("schoolInput").value = userSchool;
+                        document.getElementById("email").value = email;
                     }
                     if (userCity != null) {
-                        document.getElementById("cityInput").value = userCity;
+                        document.getElementById("name").value = name;
+                    }
+                    if (userCity != null) {
+                        document.getElementById("school").value = school;
                     }
                 })
         } else {
@@ -45,15 +49,18 @@ function saveUserInfo() {
     //enter code here
 
     //a) get user entered values
-    userName = document.getElementById('nameInput').value;       //get the value of the field with id="nameInput"
-    userSchool = document.getElementById('schoolInput').value;     //get the value of the field with id="schoolInput"
-    userCity = document.getElementById('cityInput').value;       //get the value of the field with id="cityInput"
+    country = document.getElementById('country').value;       //get the value of the field with id="nameInput"
+    email = document.getElementById('email').value;     //get the value of the field with id="schoolInput"
+    name = document.getElementById('name').value;       //get the value of the field with id="cityInput"
+    school = document.getElementById('school').value;
 
     //b) update user's document in Firestore
     currentUser.update({
-        name: userName,
-        school: userSchool,
-        city: userCity
+        country: country,
+        email: email,
+        name: name,
+        school: school
+
     })
     .then(() => {
         console.log("Document successfully updated!");
