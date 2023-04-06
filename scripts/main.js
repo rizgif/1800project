@@ -70,8 +70,8 @@ function displayCardsDynamically(collection) {
     console.log("display Cards start!")
 
     db.collection(collection)
-        // .orderBy("hike_time") //NEW LINE; what do you want to sort by?
-        // .limit(2) //NEW LINE: how many do you want to get?
+        .orderBy("timestamp") //NEW LINE; what do you want to sort by?
+        .limit(5) //NEW LINE: how many do you want to get?
         .get() //the collection called "hikes"
 
         .then(allHikes => {
