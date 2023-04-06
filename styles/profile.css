@@ -1,9 +1,9 @@
 .responsive {
     width: 100%;
     height: auto;
-  }
+}
 
-  body {
+body {
   /* background-image: url("../images/background.png"); */
   /* min-height: 100vh; */
   /* height: auto;
@@ -22,8 +22,46 @@
   background-position: center;
   background-size: cover;
   position: relative;
+}
 
+/*button css*/
+#profile_submit {
+  padding: 20px;
+  margin-bottom: auto;
+  display: flex;
+  justify-content: space-around;
+}
 
+.btn_save {
+  border: double 5px transparent;
+  background-color: #FF6653; /*#FF8575*/
+  width: 6rem;
+  height: 2.5rem;
+  border-radius: 2rem;
+  box-shadow: 0 0 5px #FF3300,
+  0 0 25px #FF3300;
+color: floralwhite;
+}
 
+.btn_edit {
+  border: double 5px transparent;
+  background-color: #FFFFFF; /*#FF8575*/
+  width: 6rem;
+  height: 2.5rem;
+  border-radius: 2rem;
+  box-shadow: 0 0 5px floralwhite,
+  0 0 25px floralwhite;
+color: #FF6653;
+}
 
-  }
+button:hover.btn_save {
+  box-shadow: 0 0 5px #FF3300,
+  0 0 10px #FF3300, 0 0 30px #FF3300,
+  0 0 30px #FF3300, 0 0 100px #FF3300;
+}
+
+button:hover.btn_edit {
+  box-shadow: 0 0 5px floralwhite,
+  0 0 10px floralwhite, 0 0 30px floralwhite,
+  0 0 30px floralwhite, 0 0 100px floralwhite;
+}
