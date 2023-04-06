@@ -63,22 +63,26 @@ Content of the project folder:
  Top level of project folder: 
 ├── .gitignore               # Git ignore file
 ├── index.html               # landing HTML file, this is what users see when you come to url
-└── login.html
-├── eachLocation.html               # landing HTML file, this is what users see when you come to url
-└── review.html
-├── main.html               # landing HTML file, this is what users see when you come to url
-└── weather_app.html
-├── profile.html               # landing HTML file, this is what users see when you come to url
-└── general_info.html
-└── heatstroke.html
-├── dehydration.html               # landing HTML file, this is what users see when you come to url
-└── emergency_contact.html
-├── 404.html               # landing HTML file, this is what users see when you come to url
-└── firebase.json
-└── .firebaserc
-├── firestore.indexes.json               # landing HTML file, this is what users see when you come to url
-└── firestore.rules
-└── README.md
+└── login.html               # login page for the users
+├── eachLocation.html        # this is what user will see after they logged in based on the user location. they will click the 
+                            button and be directed to the review page. 
+└── review.html              # the review page where user will make selection from 5 options as their feel like temperature 
+                            compared with the real temperature
+├── main.html               # this is the page that includes all 5 locations. so user can choose one and put down their reviews. 
+└── weather_app.html        # this is the weather api page, it will be appeared on the review.html and also on the nav bar
+├── profile.html               # this is the user profile page where people can edit their personal information. 
+└── general_info.html          # this is the general info about how to deal with heat-related diseases. user can come here through 
+                            nav bar.  
+└── heatstroke.html             # this is the information page about how to deal with heatstroke. 
+├── dehydration.html            # this is the information page about how to deal with dehydration. 
+└── emergency_contact.html      # this is the information page about how to get emergency contact information when it comes to 
+                            extreme hot weather. 
+├── 404.html                    # this is the page not found page if anything wrong with the firebase data.
+└── firebase.json               # firebase json file contains the information about our firebase heatpro project
+└── .firebaserc                 # firebaserc file  this is to specify the Firebase project we want to use when running Firebase 
+├── firestore.indexes.json      # firestore.indexes.json file this is to define the indexes for our Cloud Firestore database. 
+└── firestore.rules             # firestore.rules file this is to define access rules for our database.
+└── README.md                   # readme file this is the document that provides information about our project.
 
 
 It has the following subfolders and files:
@@ -114,7 +118,24 @@ It has the following subfolders and files:
     vancouver.jpg            # https://www2.gov.bc.ca/gov/content/data/geographic-data-services/land-use/
                                administrative-boundaries/health-boundaries
 ├── scripts                  # Folder for scripts
-    /blah.js                 # 
+    /authentication.js       # Get user current location
+                               Initializes firebase UI
+                               Write user info to firestore db
+    /eachLocation.js         # Display and save location info and
+                               populate reports
+    /firebaseAPI_heatpro.js  # Configures and initialize firebase db
+    /main.js                 # Run contents on main page, write the 
+                               health authority region to the database, and display the temperature reports
+    /navWeatherApp.js        # Runs weather api in the navigation
+                               bar
+    /profile.js              # Populate user info into the user 
+                               profile page. Runs js for the edit and save button. 
+    /review.js               # Gets the user's current location and 
+                               translates user temperature input into a numerical format to be stored in the firestore database. 
+    /skeleton.js             # Loads skeleton of html pages that 
+                               includes navbar and footer. 
+    /weatherApp.js           # Runs weather api into the html page. 
+
 ├── styles                   # Folder for styles
     /eachLocation.css        # style for the each location page.
     /emergency.css           # style for the emergency page.
