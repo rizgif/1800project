@@ -60,16 +60,16 @@ function populateReviews() {
             
             Temperatures.forEach(doc => {
                 var user = doc.data().userName; //gets the name field
-                var flooded = doc.data().flooded;
-                var temperature = doc.data().temperature;
+                var feelslikeTemperature = doc.data().feelslikeTemperature;
+                var actualTemperature = doc.data().actualTemperature;
                 var timestamp = doc.data().timestamp.toDate();
                 var options = { weekday: 'short', year: 'numeric', month: 'short', day: 'numeric', hour: 'numeric', minute: 'numeric', second: 'numeric', hour12: true };
                 var formattedTime = timestamp.toLocaleString('en-US', options);
            
                 let reviewCard = hikeCardTemplate.content.cloneNode(true);
                 reviewCard.querySelector('.user').innerHTML = `<strong>Username: </strong> ${user}`;     //equiv getElementByClassName
-                reviewCard.querySelector('.flooded').innerHTML = `<strong>Feelslike Temperature: </strong> ${flooded}`; 
-                reviewCard.querySelector('.temperature').innerHTML = `<strong>Actual Temperature:</strong> ${temperature}`; 
+                reviewCard.querySelector('.feelslikeTemperature').innerHTML = `<strong>Feelslike Temperature: </strong> ${feelslikeTemperature}`; 
+                reviewCard.querySelector('.actualTemperature').innerHTML = `<strong>Actual Temperature:</strong> ${actualTemperature}`; 
                 reviewCard.querySelector('.timestamp').innerHTML = `<strong>Time:</strong> ${formattedTime}`; 
             
                 hikeCardGroup.appendChild(reviewCard);
