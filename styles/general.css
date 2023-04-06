@@ -1,4 +1,4 @@
-.btn-custom {
+/* .btn-custom {
     padding: 30px;
     font-size: 27px;
    
@@ -10,14 +10,6 @@
     justify-content: center;
     flex-direction: column;
     align-items: center;
-    /* align-content: center;        */
- 
-}
-
-.dehydration {
-    margin-top: 15%;
-    background-color: rgba(255, 246, 251, 0.8);
-    border-radius: 10px;
 }
 
 .hetstroke {
@@ -37,4 +29,155 @@
 .info {
     vertical-align: middle;
     width: 130px;
+}
+
+.personal {
+    padding: 30px;
+    font-size: 27px;
+    background-color: white;
+    color:#FF6653
+}
+
+.personal button {
+    width: 300px;
+    height: 250px;
+}
+
+.personal {
+    grid-area: ps;
+    padding-right: 2%;
+    color: white;
+
+} */
+
+.personal .btn-custom,
+.eightoneone .btn-custom {
+    padding: 30px;
+    font-size: 27px;
+    background-color: white;
+    /* margin: 4%; */
+    color:#FF6653
+
+}
+
+.nineoneone .btn-custom,
+.public .btn-custom {
+    padding: 30px;
+    font-size: 27px;
+    background-color: #FF6653;
+    /* margin: 4%; */
+    color:antiquewhite;
+    cursor:unset;
+}
+
+.btn_container {
+    padding-top: 5%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    /* align-content: center;        */
+}
+
+.child>.info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.info {
+    margin-top: 5%;
+    vertical-align: middle;
+    width: 150px;
+}
+
+.pic1 {
+    vertical-align: middle;
+    width: 50px;
+    fill: #771e1e;
+}
+
+.eightoneone button,
+.nineoneone button,
+.public button,
+.personal button {
+    width: 300px;
+    height: 250px;
+}
+
+p {
+    font-size: medium;
+}
+
+h2 {
+    margin-top: 1px;
+    font-size: large;
+}
+
+.container_grid {
+    display: grid;
+    width: auto;
+    height: auto;
+    grid-template-columns: 1fr, 1fr;
+    grid-template-rows: 1fr, 1fr;
+    grid-template-areas:
+        "ps public"
+        "nine eight";
+    grid-column-gap: 5%;
+    grid-row-gap: 5%;
+    margin: 2%;
+    padding: 1%;
+    /* background-color: rgb(228, 164, 85); */
+    margin-bottom: 5%;
+}
+
+
+.nineoneone {
+    grid-area: nine;
+    color: white;
+
+}
+
+.eightoneone {
+    grid-area: eight;
+}
+
+.public {
+    grid-area: public;
+}
+
+.personal {
+    grid-area: ps;
+    padding-right: 2%;
+    color: white;
+
+}
+
+a {
+    text-decoration: none;
+}
+
+
+@media only screen and (max-width: 700px) {
+    .container_grid {
+        display: grid;
+        width: auto;
+        height:fit-content;
+        grid-template-columns: unset;
+        grid-template-rows: auto;
+        grid-template-areas:
+            "ps"
+            "public"
+            "eight"
+            "nine"
+        ;
+        grid-column-gap: 5%;
+        grid-row-gap: 2%;
+        margin: 2%;
+        padding: 1%;
+        /* background-color: rgb(228, 164, 85); */
+        margin-bottom: 15%;
+    }
 }

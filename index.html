@@ -35,7 +35,7 @@
     <!-- Other libraries and styles of your own -->
     <!-------------------------------------------->
     <!-- <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"> -->
-    <link rel="stylesheet" href="./styles/style.css">
+    <link rel="stylesheet" href="./styles/index.css">
 
 </head>
 
@@ -51,10 +51,13 @@
     <!-- stuff -->
     <div class="container text-center">
         <img class="d-block mx-auto mb-4 py-3 responsive" src="./images/heatprologo.png" alt="">
-        <h1>Welcome!</h1>
-        Sharing how you feel about the temperature forecast can make a big difference in how others prepare for the day ahead!
+        <h1>Welcome</h1>
+        <p>Updating your perceived temperature provides more accurate weather forecasts that can help people take precautions against extreme weather conditions </p>
         <h1>
-            <a href="login.html" class="btn btn-lg btn-warning" role="button">   Log in</a>
+            <!-- <a href="login.html" class="btn btn-lg btn-danger" role="button"> Log in</a> -->
+            <div class="d-flex justify-content-center" id="login_btn">
+                <button type="button" class="btn_login" onclick="window.location.href='login.html'">Log in</button>
+            </div>
         </h1>
    </div>
 

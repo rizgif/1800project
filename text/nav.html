@@ -9,14 +9,25 @@
 <body>
     <nav id="navbar">
         <a href="main.html"><img alt="logo" id="logo" src="/images/logo2.jpg"></a>
+
+        <div class="weather-container">
+          <div class="weather-icon">
+            <img src="icons/unknown.png" alt="">
+          </div>
+          <div class="temperature-value">
+            <p>- °<span>C</span></p>
+          </div>
+        </div>
+
         <div class="nav-links" id="navlinks">
             <img alt="closemenu" id="i1" src="/images/mu.png" onclick="hideMenu()">
             <ul>
-                <li><a href="main.html">Home</a></li>
+                <li><a href="">Home</a></li>
+                <li><a href="main.html">Locations</a></li>
                 <li><a href="general_info.html">General Info</a></li>
                 <!-- <li><a href="eachLocation.html">Other Users</a></li> -->
                 <li><a href="emergency_contact.html">Emergency</a></li>
-                <li><a href="#userprofile">User Profile</a></li>
+                <li><a href="profile.html">User Profile</a></li>
             </ul>
         </div>
         <img alt="menu" id="i2" src="/images/menu.png" onclick="showMenu()">
@@ -34,7 +45,7 @@
         // navLinks.style.right = "-300px";
     }
     </script>
-
+    <script src="scripts/navWeatherApp.js"></script>
 </body>
 
 

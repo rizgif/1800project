@@ -39,9 +39,26 @@ body {
         0 0 5px #dbc927;
 }
 
-.btn {
+/* .btn {
   font-size: 12pt;
   padding: 15px;
   
-}
+} */
 
+.btn_submit {
+      border: double 5px transparent;
+      background-color: #FF6653; /*#FF8575*/
+      width: 23rem;
+      height: 2.5rem;
+      border-radius: 2rem;
+      box-shadow: 0 0 5px #FF3300,
+      0 0 25px #FF3300;
+      color: floralwhite;
+      font-size: 13pt;
+  }
+    
+  button:hover {
+      box-shadow: 0 0 5px #FF3300,
+      0 0 15px #FF3300, 0 0 30px #FF3300,
+      0 0 50px #FF3300, 0 0 100px #FF3300;
+  }

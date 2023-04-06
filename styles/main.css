@@ -1,10 +1,10 @@
-.header {
+/* .header {
     margin: 2%;
     padding: 10px, 15px;
     text-align: center;
-}
+} */
 
-h3{
+/* h3{
     font-size: 28px;
 }
 
@@ -25,15 +25,15 @@ p {
 .thrid {
     flex: 1 1 30%;
     margin: 10px;
-}
+} */
 
-.fourth,
+/* .fourth,
 .fifth {
     flex: 1 1 40%;
     margin: 10px;
-}
+} */
 
-@media (max-width: 767px) {
+/* @media (max-width: 767px) {
 
     .first,
     .second,
@@ -43,11 +43,11 @@ p {
         flex: 1 1 100%;
         margin: 10px 0;
     }
-}
+} */
 
-.container {
+/* .container {
     margin: unset;
-}
+} */
 
 .container h2 {
     position: absolute;
@@ -72,15 +72,15 @@ p {
     transform: translate(-50%, -50%); */
 }
 
-.header p {
+/* .header p {
     font-size: 25px;
-}
+} */
 
 
-.container h1 {
+/* .container h1 {
     margin: 2%;
     text-align: center;
-}
+} */
 
 .first,
 .second,
@@ -116,8 +116,6 @@ p {
     text-align: center;
     background-repeat: no-repeat;
     border-radius: 10px;
-
-   
 
 
 }

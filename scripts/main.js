@@ -6,9 +6,7 @@ function doAll() {
     firebase.auth().onAuthStateChanged(user => {
         if (user) {
             currentUser = db.collection("users").doc(user.uid); //global
-            console.log(currentUser);
-
-        
+            console.log(currentUser);       
             insertNameFromFirestore();
             // displayCardsDynamically("locations");
         } else {
@@ -43,75 +41,25 @@ function writeLocations() {
   hikesRef.add({
       code: "fraserhealth",
       name: "Fraser Health"
-      // city: "Burnaby",
-      // province: "BC",
-      // level: "easy",
-      // details: "A lovely place for lunch walk",
-      // length: 10,          //number value
-      // hike_time: 60,       //number value
-      // lat: 49.2467097082573,
-      // lng: -122.9187029619698,
-      // last_updated: firebase.firestore.FieldValue.serverTimestamp()  //current system time
   });
  
   hikesRef.add({
       code: "interiorhealth",
       name: "Interior Health"
-      // city: "Anmore",
-      // province: "BC",
-      // level: "moderate",
-      // details: "Close to town, and relaxing",
-      // length: 10.5,      //number value
-      // hike_time: 80,     //number value
-      // lat: 49.3399431028579,
-      // lng: -122.85908496766939,
-      // last_updated: firebase.firestore.Timestamp.fromDate(new Date("March 10, 2022"))
   });
   hikesRef.add({
       code: "islandhealth",
-      name: "Island Health" //replace with your own city?
-      // city: "North Vancouver",
-      // province: "BC",
-      // level: "hard",
-      // details:  "Amazing ski slope views",
-      // length: 8.2,        //number value
-      // hike_time: 120,     //number value
-      // lat: 49.38847101455571,
-      // lng: -122.94092543551031,
-      // last_updated: firebase.firestore.Timestamp.fromDate(new Date("January 1, 2023"))
+      name: "Island Health" 
   });
   hikesRef.add({
     code: "vancouver",
-    name: "Vancouver Coastal Health" //replace with your own city?
-    // city: "North Vancouver",
-    // province: "BC",
-    // level: "hard",
-    // details:  "Amazing ski slope views",
-    // length: 8.2,        //number value
-    // hike_time: 120,     //number value
-    // lat: 49.38847101455571,
-    // lng: -122.94092543551031,
-    // last_updated: firebase.firestore.Timestamp.fromDate(new Date("January 1, 2023"))
+    name: "Vancouver Coastal Health" 
 });
   hikesRef.add({
     code: "northernhealth",
-    name: "Northern Health" //replace with your own city?
-    // city: "North Vancouver",
-    // province: "BC",
-    // level: "hard",
-    // details:  "Amazing ski slope views",
-    // length: 8.2,        //number value
-    // hike_time: 120,     //number value
-    // lat: 49.38847101455571,
-    // lng: -122.94092543551031,
-    // last_updated: firebase.firestore.Timestamp.fromDate(new Date("January 1, 2023"))
+    name: "Northern Health" 
   });
 }
-
-
-
-
-
 
 
 //------------------------------------------------------------------------------
@@ -133,7 +81,8 @@ function displayCardsDynamically(collection) {
                 // var details = doc.data().details; // get value of the "details" key
                 var hikeCode = doc.data().code; //get unique ID to each hike to be used for fetching right image
                 // var hikeLength = doc.data().length; //gets the length field
-                var docId = doc.id;
+                var ID = doc.id;
+                console.log(ID);
                 let newcard = cardTemplate.content.cloneNode(true);
 
                 //update title and text and image etc.
@@ -142,10 +91,14 @@ function displayCardsDynamically(collection) {
                 //newcard.querySelector('.card-length').innerHTML = hikeLength + "km";
                 // newcard.querySelector('.card-text').innerHTML = details;
                 newcard.querySelector('.card-image').src = `./images/${hikeCode}.jpg`; //Example: NV01.jpg
-                newcard.querySelector('a').href = "eachLocation.html?docID=" + docId;
-                console.log(docId)
+                newcard.querySelector('a').href = "eachLocation.html?ID=" + ID;
+                //alert(docId)
 
+<<<<<<< HEAD
                 // localStorage.setItem("docId", docId);
+=======
+                //localStorage.setItem("docId", docId);
+>>>>>>> d91fcb590f7f2f503638e4a1e0a8dff50fa37967
                 
 
                 //NEW LINE: update to display length, duration, last updated
@@ -169,8 +122,6 @@ function displayCardsDynamically(collection) {
                        document.getElementById('save-' + hikeID).innerText = 'bookmark';
                     }
               })
-
-
 
                 //Finally done modifying newcard
                 //attach to gallery, Example: "hikes-go-here"
