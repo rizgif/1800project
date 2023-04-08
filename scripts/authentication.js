@@ -10,19 +10,19 @@ function getCurrentLocation() {
 
       //decide which health authority the user belongs to
 
-      if (latitude > 49 && longitude < -123) {
+      if (latitude > 49 && longitude < -121) {
         locationID = "7TVhl0XTvb17Kj7e2VNa";
         console.log("fraserhealth", locationID);
-      } else if (latitude > 50 && longitude < -124) {
+      } else if (latitude < 49 && longitude < -121) {
         locationID = "svN4aQvBZDPG4CYbPQJR";
         console.log("islandhealth");
-      } else if (latitude > 51 && longitude < -125) {
+      } else if (latitude < 49 && longitude > -121) {
         locationID: "i9k0csjI8D4j1qO5SRBh";
         console.log("northernhealth");
-      } else if (latitude > 52 && longitude < -126) {
+      } else if (latitude > 49 && longitude > -121) {
         locationID: "QxuzllDeJsANXlK485jy";
         console.log("vancouverhealth");
-      } else if (latitude > 53 && longitude < -130) {
+      } else if (latitude = 49 && (longitude = -121)) {
         locationID: "eGT8jGFAvzKAhO5du1Rz";
         console.log("interiorhealth");
       }
